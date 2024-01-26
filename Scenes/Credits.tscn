@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://k1ofdi2312b6"]
+[gd_scene load_steps=2 format=3 uid="uid://k1ofdi2312b6"]
+
+[ext_resource type="Texture2D" uid="uid://b2asb8dtbp28r" path="res://Assets/video-games-and-block-chain.jpeg" id="1_yxgdm"]
 
 [node name="Credits" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+scale = Vector2(1.91276, 1.79817)
+texture = ExtResource("1_yxgdm")
+centered = false

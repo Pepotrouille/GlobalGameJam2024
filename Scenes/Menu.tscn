@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cua6n3crbf07d"]
+[gd_scene load_steps=3 format=3 uid="uid://cua6n3crbf07d"]
 
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_kcl5f"]
 [ext_resource type="Texture2D" uid="uid://clsssn8p1g31l" path="res://Assets/uwu_bg.png" id="1_s6c2g"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_kcl5f")
 
 [node name="BG" type="Sprite2D" parent="."]
 texture = ExtResource("1_s6c2g")
