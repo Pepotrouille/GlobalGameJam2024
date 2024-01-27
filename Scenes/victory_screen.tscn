@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7wktd2eklox"]
+
+[ext_resource type="Texture2D" uid="uid://clsssn8p1g31l" path="res://Assets/uwu_bg.png" id="1_0boas"]
+[ext_resource type="Script" path="res://Scripts/victory_screen.gd" id="1_mywmx"]
+[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/cursor.tscn" id="3_0qa50"]
+[ext_resource type="Texture2D" uid="uid://nxaxnqk30lrt" path="res://Assets/Patpat.png" id="4_unj0n"]
+
+[node name="Victory_screen" type="Node2D"]
+script = ExtResource("1_mywmx")
+
+[node name="UwuBg" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_0boas")
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 622.0
+offset_top = 709.0
+offset_right = 887.0
+offset_bottom = 804.0
+text = "Back to main menu"
+
+[node name="cursor" parent="." instance=ExtResource("3_0qa50")]
+
+[node name="Patpat" type="Sprite2D" parent="."]
+position = Vector2(1273, 523)
+scale = Vector2(1.62265, 1.62265)
+texture = ExtResource("4_unj0n")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

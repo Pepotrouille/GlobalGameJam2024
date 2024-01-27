@@ -4,8 +4,10 @@ extends Node2D
 @export var credit_scene: PackedScene = preload("res://Scenes/Credits.tscn")
 
 func _ready():
+	var game_button = get_node("StartButton")
+	game_button.connect("pressed", Callable(self, "_on_start_button_pressed"))
 	var credit_button = get_node("CreditButton")
-	credit_button.connect("pressed", Callable(self, "_on_credits_pressed"))
+	credit_button.connect("pressed", Callable(self, "_on_credits_button_pressed"))
 
 func _on_start_button_pressed():
 	var root = get_tree().get_root()
