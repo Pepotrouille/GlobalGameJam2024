@@ -43,10 +43,9 @@ func _unhandled_input(event):
 #--------------icons management-------------
 
 func _change_icon(type_of_object):
-	var icon = null
+	var end_game = false
 	#if type_of_object is clickable_object.type_object
 	if type_of_object is Game.TYPE_OBJECTS:
-		
 		match type_of_object:
 			Game.TYPE_OBJECTS.FLEUR:
 				$Cases/icon1.texture = fleur_icon
@@ -60,5 +59,9 @@ func _change_icon(type_of_object):
 				$Cases/icon3.texture = crocs_icon
 				crocs_found = true
 				$CrocsCat._meme_appear()
+				
+	if crocs_found and tourne_disque_found and fleur_found:
+		end_game = true
+	return end_game
 
 
