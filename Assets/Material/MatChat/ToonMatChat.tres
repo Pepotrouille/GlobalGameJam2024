@@ -1,4 +1,7 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvl02tdreyaqj"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dvl02tdreyaqj"]
+
+[ext_resource type="Texture2D" uid="uid://dtqio66rhidxt" path="res://Assets/Texture/Chat/Gatto_1_1.png" id="1_gwylg"]
 
 [resource]
 diffuse_mode = 3
+albedo_texture = ExtResource("1_gwylg")
