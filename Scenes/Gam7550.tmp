@@ -5,4 +5,4 @@
 [node name="Game" type="Node2D"]
 
 [node name="cursor" parent="." instance=ExtResource("1_snrvy")]
-position = Vector2(102, 50)
+position = Vector2(241, 242)
