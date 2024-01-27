@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://nptwhshcgrwt"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_4n5fk"]
-[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/cursor.tscn" id="1_snrvy"]
-[ext_resource type="PackedScene" uid="uid://bwa3uhbqwok57" path="res://Scenes/UI/gui.tscn" id="2_x43op"]
+[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/Cursor.tscn" id="1_snrvy"]
 [ext_resource type="PackedScene" uid="uid://cg0naidxidamy" path="res://Scenes/GD-Game.tscn" id="3_u7mmu"]
+[ext_resource type="PackedScene" uid="uid://bwa3uhbqwok57" path="res://Scenes/UI/Gui.tscn" id="4_dmn0q"]
 [ext_resource type="PackedScene" uid="uid://blw74xabx2q87" path="res://Scenes/Objects/clickable_object.tscn" id="4_hcv4a"]
 
 [node name="Game" type="Node2D"]
@@ -22,7 +22,7 @@ position = Vector2(102, 50)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GUI" parent="CanvasLayer" instance=ExtResource("2_x43op")]
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("4_dmn0q")]
 
 [node name="TourneDisque" parent="." instance=ExtResource("4_hcv4a")]
 position = Vector2(1434, 689)

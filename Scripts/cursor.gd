@@ -31,7 +31,7 @@ func _click_happenned(event):
 			switch_to_cursor_interacting()
 		else:
 			switch_to_cursor_interact()
-			if current_entered_area is clickable_object :
+			if current_entered_area is clickable_object:
 				type = current_entered_area.get_type()
 	return type
 

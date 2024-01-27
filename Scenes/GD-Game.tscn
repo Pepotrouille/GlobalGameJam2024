@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cg0naidxidamy"]
+[gd_scene load_steps=35 format=3 uid="uid://cg0naidxidamy"]
 
 [ext_resource type="Texture2D" uid="uid://co15m515en4q6" path="res://Assets/Texture/Background.jpg" id="1_rv3rp"]
 [ext_resource type="Shader" path="res://Assets/Texture/Pixelization.gdshader" id="2_vwbbr"]
@@ -7,11 +7,10 @@
 [ext_resource type="Material" uid="uid://trrb6dnkfdns" path="res://Assets/Material/MatEnviro/ToonMat.tres" id="4_kohj6"]
 [ext_resource type="Material" uid="uid://bcbro2dqv2vyy" path="res://Assets/Material/MatEnviro/ToonMatSol.tres" id="5_j0tkv"]
 [ext_resource type="Material" uid="uid://cslxmn7ivd8cg" path="res://Assets/Material/MatEnviro/ToonMatTapis.tres" id="5_sd34p"]
-[ext_resource type="Material" uid="uid://cww2chxdfrocs" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="7_5s2cd"]
-[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDroite.tres" id="7_m6r0k"]
+[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDRoite.tres" id="7_m6r0k"]
 [ext_resource type="Material" uid="uid://5dncish0kcfi" path="res://Assets/Material/MatEnviro/ToonMatFenêtre.tres" id="8_f686b"]
 [ext_resource type="Material" uid="uid://dsig0nxyu7nju" path="res://Assets/Material/MatEnviro/ToonMatBureau.tres" id="9_3g4hl"]
-[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurFace.tres" id="9_yg1a5"]
+[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="9_yg1a5"]
 [ext_resource type="PackedScene" uid="uid://omq0elugdwe8" path="res://Assets/FBX/Desk_01.fbx" id="10_gqubr"]
 [ext_resource type="PackedScene" uid="uid://cv8xe1ayuuohc" path="res://Assets/FBX/Chaise_Bureau.fbx" id="10_votf7"]
 [ext_resource type="Material" uid="uid://8vow8jw4hk4m" path="res://Assets/Material/MatMeme/ToonMatCrocs.tres" id="12_60eax"]
@@ -99,7 +98,7 @@ transform = Transform3D(0.936758, 0.073362, -0.342203, -1.7643e-09, 0.977783, 0.
 current = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
-transform = Transform3D(0.997185, -0.0749787, 5.96046e-08, 0.0749787, 0.997185, -2.98023e-08, 0, -2.98023e-08, 1, -5.96046e-08, -1.19209e-07, -0.873514)
+transform = Transform3D(0.997185, -0.0749787, 1.19209e-07, 0.0749787, 0.997185, -4.47035e-08, -2.98023e-08, -5.96046e-08, 1, -1.78814e-07, -1.19209e-07, -0.873514)
 material_override = SubResource("ShaderMaterial_8xl5h")
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_mhwse")
@@ -130,7 +129,7 @@ size = Vector3(0.5, 4, 4)
 
 [node name="Mur Gauche" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8629, 2.226, -0.222249)
-material_override = ExtResource("7_5s2cd")
+material_override = ExtResource("9_yg1a5")
 size = Vector3(0.302002, 5, 4.5155)
 
 [node name="Mur Arrière" type="CSGBox3D" parent="Pièce"]
