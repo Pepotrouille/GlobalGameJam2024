@@ -1,0 +1,284 @@
+[gd_scene load_steps=20 format=3 uid="uid://cg0naidxidamy"]
+
+[ext_resource type="Shader" path="res://Assets/Texture/Pixelization.gdshader" id="2_vwbbr"]
+[ext_resource type="Shader" path="res://Assets/Texture/CellShading.gdshader" id="3_dodig"]
+[ext_resource type="Texture2D" uid="uid://bdg1kaaxh083r" path="res://icon.svg" id="3_iascx"]
+[ext_resource type="Material" uid="uid://trrb6dnkfdns" path="res://Assets/Material/MatEnviro/ToonMat.tres" id="4_kohj6"]
+[ext_resource type="Texture2D" uid="uid://q6j1n30jo4ph" path="res://Assets/Texture/Background.png" id="5_1cab1"]
+[ext_resource type="Material" uid="uid://bcbro2dqv2vyy" path="res://Assets/Material/MatEnviro/ToonMatSol.tres" id="5_j0tkv"]
+[ext_resource type="Material" uid="uid://cslxmn7ivd8cg" path="res://Assets/Material/MatEnviro/ToonMatTapis.tres" id="5_sd34p"]
+[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDRoite.tres" id="6_sjkq8"]
+[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="7_5s2cd"]
+[ext_resource type="Material" uid="uid://5dncish0kcfi" path="res://Assets/Material/MatEnviro/ToonMatFenêtre.tres" id="8_f686b"]
+[ext_resource type="Material" uid="uid://dsig0nxyu7nju" path="res://Assets/Material/MatEnviro/ToonMatBureau.tres" id="9_3g4hl"]
+[ext_resource type="Material" uid="uid://8vow8jw4hk4m" path="res://Assets/Material/MatMeme/ToonMatCrocs.tres" id="12_60eax"]
+[ext_resource type="ArrayMesh" uid="uid://38ycsrweyl6x" path="res://Assets/FBX/Crocs_03.obj" id="12_m7opg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xl5h"]
+render_priority = 0
+shader = ExtResource("3_dodig")
+shader_parameter/outlineColor = Color(0, 0, 0, 0.78)
+shader_parameter/depth_threshold = 0.025
+shader_parameter/normal_threshold = 0.5
+shader_parameter/normal_smoothing = 0.25
+shader_parameter/max_thickness = 1.3
+shader_parameter/min_thickness = 0.5
+shader_parameter/max_distance = 75.0
+shader_parameter/min_distance = 2.0
+shader_parameter/grazing_fresnel_power = 5.0
+shader_parameter/grazing_angle_mask_power = 1.0
+shader_parameter/grazing_angle_modulation_factor = 50.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lc8mq"]
+render_priority = 0
+shader = ExtResource("3_dodig")
+shader_parameter/outlineColor = Color(0, 0, 0, 0.78)
+shader_parameter/depth_threshold = 0.025
+shader_parameter/normal_threshold = 0.5
+shader_parameter/normal_smoothing = 0.25
+shader_parameter/max_thickness = 1.3
+shader_parameter/min_thickness = 0.5
+shader_parameter/max_distance = 75.0
+shader_parameter/min_distance = 2.0
+shader_parameter/grazing_fresnel_power = 5.0
+shader_parameter/grazing_angle_mask_power = 1.0
+shader_parameter/grazing_angle_modulation_factor = 50.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_mhwse"]
+material = SubResource("ShaderMaterial_lc8mq")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppkf5"]
+shader = ExtResource("2_vwbbr")
+shader_parameter/pixelate = 256.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kq32"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.870588, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2tp5"]
+diffuse_mode = 3
+emission_enabled = true
+emission = Color(1, 1, 0.619608, 1)
+
+[node name="Game" type="Node2D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.759181, -0.616379, -0.209093, -0.516829, -0.766146, 0.38198, -0.39564, -0.181927, -0.900206, 0, 5.45069, -7.13048)
+light_angular_distance = 0.25
+shadow_enabled = true
+shadow_blur = 0.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.936758, 0.073362, -0.342203, -1.7643e-09, 0.977783, 0.209619, 0.349978, -0.196362, 0.915946, -1.0641, 1.67282, 1.66085)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(0.997185, -0.0749787, 5.96046e-08, 0.0749787, 0.997185, -2.98023e-08, 0, -2.98023e-08, 1, -5.96046e-08, -1.19209e-07, -0.873514)
+material_override = SubResource("ShaderMaterial_8xl5h")
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_mhwse")
+skeleton = NodePath("../..")
+
+[node name="Shader Pixelization" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_ppkf5")
+scale = Vector2(15, 8.4375)
+texture = ExtResource("3_iascx")
+centered = false
+
+[node name="Pièce" type="Node3D" parent="."]
+
+[node name="Sol" type="CSGBox3D" parent="Pièce"]
+size = Vector3(6, 0.5, 4)
+material = ExtResource("5_j0tkv")
+
+[node name="Plafond" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = ExtResource("4_kohj6")
+size = Vector3(6, 0.5, 4)
+
+[node name="Mur Droite" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74537, 2.25898, -0.0167141)
+material_override = ExtResource("6_sjkq8")
+size = Vector3(0.5, 4, 4)
+
+[node name="Mur Gauche" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8629, 2.226, -0.222249)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.302002, 5, 4.5155)
+
+[node name="Mur Arrière" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0765724, 2.226, 1.88172)
+visible = false
+size = Vector3(6.18094, 5, 0.307556)
+
+[node name="Mur Avant" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.069, 2.226, -2.23)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(6, 5, 0.5)
+
+[node name="Mur Av Dessous" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0511777, 0.130785, -2.23)
+material_override = ExtResource("7_5s2cd")
+size = Vector3(5.96436, 0.80957, 0.5)
+
+[node name="Mur Av Dessus" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0511777, 2.87697, -2.21511)
+material_override = ExtResource("7_5s2cd")
+size = Vector3(5.96436, 0.9375, 0.470215)
+
+[node name="Mur Av Droite" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18088, 2.226, -2.23)
+material_override = ExtResource("7_5s2cd")
+size = Vector3(1.50024, 5, 0.5)
+
+[node name="Mur Av Gauche" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4013, 2.226, -2.23)
+material_override = ExtResource("7_5s2cd")
+size = Vector3(0.746338, 5, 0.5)
+
+[node name="Mur Av Milieu" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.364312, 2.226, -2.23)
+material_override = ExtResource("7_5s2cd")
+size = Vector3(1.49731, 5, 0.5)
+
+[node name="Fenêtre" type="Node3D" parent="Pièce"]
+
+[node name="Barre Vertical G" type="CSGBox3D" parent="Pièce/Fenêtre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57463, 1.57629, -2.16926)
+material_override = ExtResource("8_f686b")
+size = Vector3(0.107605, 2.1232, 0.106079)
+
+[node name="Barre Vertical D" type="CSGBox3D" parent="Pièce/Fenêtre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.949453, 1.57629, -2.16926)
+material_override = ExtResource("8_f686b")
+size = Vector3(0.107605, 2.1232, 0.106079)
+
+[node name="Vitre G" type="CSGBox3D" parent="Pièce/Fenêtre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51642, 1.57629, -2.17572)
+material_override = SubResource("StandardMaterial3D_8kq32")
+size = Vector3(1.376, 2.1232, 0.0731506)
+
+[node name="Vitre D" type="CSGBox3D" parent="Pièce/Fenêtre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.897761, 1.57629, -2.18178)
+material_override = SubResource("StandardMaterial3D_8kq32")
+size = Vector3(1.24809, 2.1232, 0.0731506)
+
+[node name="Barre horizontal" type="CSGBox3D" parent="Pièce/Fenêtre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.227098, 1.94603, -2.16926)
+material_override = ExtResource("8_f686b")
+size = Vector3(4.1333, 0.121704, 0.106079)
+
+[node name="Meuble" type="Node3D" parent="."]
+
+[node name="Bureau" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17732, 0.905424, -0.261855)
+
+[node name="Pied2" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0773618, -0.318594, -0.815569)
+material_override = ExtResource("9_3g4hl")
+size = Vector3(0.121948, 0.674961, 0.144775)
+
+[node name="Bureau" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.263198)
+material_override = ExtResource("9_3g4hl")
+size = Vector3(0.890625, 0.18, 1.3302)
+
+[node name="Bureau2" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00637126, -0.315598, 0.574724)
+material_override = ExtResource("9_3g4hl")
+size = Vector3(0.890625, 0.806309, 0.373322)
+
+[node name="Chaise" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41297, 0.686197, -0.293551)
+
+[node name="Siège" type="CSGBox3D" parent="Meuble/Chaise"]
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.462402, 0.18, 0.585724)
+
+[node name="Siège2" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260483, 0.40959, 0)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.106049, 0.99918, 0.585724)
+
+[node name="Pied1" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0245247, -0.180901, 0.0467253)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.120949, 0.394471, 0.152168)
+
+[node name="Pied2" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0138867, -0.40198, 0.0578253)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.378138, 0.123627, 0.485857)
+
+[node name="Rangement" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.426955, 0.530948, -1.49574)
+
+[node name="Rangement" type="CSGBox3D" parent="Meuble/Rangement"]
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.944301, 0.691818, 0.719369)
+material = ExtResource("4_kohj6")
+
+[node name="Tapis" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.680276, 0.223888, 0.169993)
+
+[node name="Tapis" type="CSGBox3D" parent="Meuble/Tapis"]
+material_override = ExtResource("5_sd34p")
+size = Vector3(1.96923, 0.116802, 1.46134)
+material = ExtResource("4_kohj6")
+
+[node name="PC" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27006, 1.39787, -0.517795)
+
+[node name="Pied1" type="CSGBox3D" parent="Meuble/PC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0162814, -0.352533, 0.0412962)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.378138, 0.123627, 0.485857)
+
+[node name="Pied2" type="CSGBox3D" parent="Meuble/PC"]
+transform = Transform3D(0.934391, -0.356249, 0, 0.356249, 0.934391, 0, 0, 0, 1, 0.0519316, -0.174546, 0.00343651)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.112357, 0.351853, 0.250886)
+
+[node name="Ecran" type="CSGBox3D" parent="Meuble/PC"]
+transform = Transform3D(0.989503, 0.144512, 0, -0.144512, 0.989503, 0, 0, 0, 1, -0.0411839, 0.0867881, 0)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.054961, 0.550396, 0.769658)
+
+[node name="Lampe" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23924, 2.37268, -0.829544)
+
+[node name="Lampe" type="CSGBox3D" parent="Meuble/Lampe"]
+size = Vector3(0.378138, 0.50322, 0.485857)
+material = SubResource("StandardMaterial3D_e2tp5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Meuble/Lampe/Lampe"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173539, -0.28202, -0.17747)
+light_color = Color(1, 1, 0.831373, 1)
+light_energy = 0.5
+
+[node name="Lampe2" type="CSGBox3D" parent="Meuble/Lampe"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00777113, 0.2658, 0.000373304)
+size = Vector3(0.306287, 0.487433, 0.319306)
+material = ExtResource("5_j0tkv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Meuble/Lampe/Lampe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173539, -0.28202, -0.17747)
+light_color = Color(1, 1, 0.831373, 1)
+light_energy = 0.5
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0918092, 1.47214, -4.9355)
+lod_bias = 0.001
+ignore_occlusion_culling = true
+gi_mode = 0
+texture = ExtResource("5_1cab1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0512313, 0, -0.0858799, 0, 0.1, 0, 0.0858799, 0, 0.0512313, 1.93757, 0.225482, -0.322536)
+material_override = ExtResource("12_60eax")
+mesh = ExtResource("12_m7opg")

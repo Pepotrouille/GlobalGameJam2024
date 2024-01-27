@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://nptwhshcgrwt"]
+
+[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/cursor.tscn" id="1_snrvy"]
+[ext_resource type="PackedScene" uid="uid://bwa3uhbqwok57" path="res://Scenes/UI/gui.tscn" id="2_x43op"]
+[ext_resource type="PackedScene" uid="uid://blw74xabx2q87" path="res://Scenes/Objects/clickable_object.tscn" id="3_s2j82"]
+[ext_resource type="Texture2D" uid="uid://bmy04wuo2alab" path="res://Assets/placeholder/icon2.png" id="4_stsqg"]
+
+[node name="Game" type="Node2D"]
+
+[node name="cursor" parent="." instance=ExtResource("1_snrvy")]
+position = Vector2(102, 50)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("2_x43op")]
+
+[node name="ClickableObject" parent="." instance=ExtResource("3_s2j82")]
+position = Vector2(812, 188)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(812, 186)
+texture = ExtResource("4_stsqg")

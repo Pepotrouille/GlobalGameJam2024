@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://nptwhshcgrwt"]
+[gd_scene load_steps=4 format=3 uid="uid://nptwhshcgrwt"]
 
 [ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/cursor.tscn" id="1_snrvy"]
 [ext_resource type="PackedScene" uid="uid://bwa3uhbqwok57" path="res://Scenes/UI/gui.tscn" id="2_x43op"]
+[ext_resource type="PackedScene" uid="uid://cg0naidxidamy" path="res://Scenes/GD-Game.tscn" id="3_u7mmu"]
 
 [node name="Game" type="Node2D"]
 
@@ -11,3 +12,5 @@ position = Vector2(102, 50)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource("2_x43op")]
+
+[node name="Game" parent="." instance=ExtResource("3_u7mmu")]
