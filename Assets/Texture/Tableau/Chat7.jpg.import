@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q6j1n30jo4ph"
-path.s3tc="res://.godot/imported/Background.png-a55f4a019d6e02890cc1ae1c572436c2.s3tc.ctex"
+uid="uid://c01qns1sx1slw"
+path.s3tc="res://.godot/imported/Chat7.jpg-1d7bd75e453df8cef20009a49808af21.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Texture/Background.png"
-dest_files=["res://.godot/imported/Background.png-a55f4a019d6e02890cc1ae1c572436c2.s3tc.ctex"]
+source_file="res://Assets/Texture/Tableau/Chat7.jpg"
+dest_files=["res://.godot/imported/Chat7.jpg-1d7bd75e453df8cef20009a49808af21.s3tc.ctex"]
 
 [params]
 
