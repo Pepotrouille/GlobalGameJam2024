@@ -5,3 +5,5 @@
 [resource]
 diffuse_mode = 3
 albedo_texture = ExtResource("1_khmls")
+emission_enabled = true
+emission_operator = 1
