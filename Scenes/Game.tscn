@@ -11,3 +11,4 @@ position = Vector2(102, 50)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource("2_x43op")]
+[node name="Node2D" type="Node2D"]

@@ -1,0 +1,172 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg0naidxidamy"]
+
+[ext_resource type="PackedScene" uid="uid://cuydeo1jve7tn" path="res://Assets/FBX/Tourne_Disque.fbx" id="2_trf2c"]
+[ext_resource type="Shader" path="res://Assets/Texture/Pixelization.gdshader" id="2_vwbbr"]
+[ext_resource type="Texture2D" uid="uid://bdg1kaaxh083r" path="res://icon.svg" id="3_iascx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppkf5"]
+shader = ExtResource("2_vwbbr")
+shader_parameter/pixelate = 256.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kq32"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.870588, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2tp5"]
+emission_enabled = true
+emission = Color(1, 1, 0.592157, 1)
+
+[node name="Game" type="Node2D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.759181, -0.616379, -0.209093, -0.516829, -0.766146, 0.38198, -0.39564, -0.181927, -0.900206, 0, 5.45069, -7.13048)
+light_angular_distance = 0.25
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.936758, 0.073362, -0.342203, -1.7643e-09, 0.977783, 0.209619, 0.349978, -0.196362, 0.915946, -1.0641, 1.67282, 1.66085)
+current = true
+
+[node name="Shader Pixelization" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ppkf5")
+scale = Vector2(9.96875, 5.60156)
+texture = ExtResource("3_iascx")
+centered = false
+
+[node name="Root Scene" parent="." instance=ExtResource("2_trf2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.219415, -0.711631)
+visible = false
+
+[node name="Pièce" type="Node3D" parent="."]
+
+[node name="Sol" type="CSGBox3D" parent="Pièce"]
+size = Vector3(6, 0.5, 4)
+
+[node name="Mur G" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74537, 2.25898, -0.0167141)
+size = Vector3(0.5, 4, 4)
+
+[node name="Plafond" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+size = Vector3(6, 0.5, 4)
+
+[node name="Mur F" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.069, 2.226, -2.23)
+visible = false
+size = Vector3(6, 5, 0.5)
+
+[node name="Mur F5" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0511777, 0.130785, -2.23)
+size = Vector3(5.96436, 0.80957, 0.5)
+
+[node name="Mur F6" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0511777, 2.94093, -2.21511)
+size = Vector3(5.96436, 0.80957, 0.470215)
+
+[node name="Mur F7" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62857, 1.94603, -2.16926)
+size = Vector3(4.1333, 0.121704, 0.106079)
+
+[node name="Mur F8" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.20648, 1.57629, -2.16926)
+size = Vector3(0.107605, 2.1232, 0.106079)
+
+[node name="Mur F9" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645562, 1.57629, -2.16926)
+size = Vector3(0.107605, 2.1232, 0.106079)
+
+[node name="Mur F10" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10057, 1.57629, -2.17615)
+material_override = SubResource("StandardMaterial3D_8kq32")
+size = Vector3(1.24809, 2.1232, 0.0731506)
+
+[node name="Mur F11" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.606936, 1.57629, -2.17615)
+material_override = SubResource("StandardMaterial3D_8kq32")
+size = Vector3(1.24809, 2.1232, 0.0731506)
+
+[node name="Mur F2" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0914, 2.226, -2.23)
+size = Vector3(1.6792, 5, 0.5)
+
+[node name="Mur F3" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.765161, 2.226, -2.23)
+size = Vector3(1.6792, 5, 0.5)
+
+[node name="Mur F4" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8629, 2.226, -0.222249)
+size = Vector3(0.302002, 5, 4.5155)
+
+[node name="Mur B" type="CSGBox3D" parent="Pièce"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0765724, 2.226, 1.88172)
+visible = false
+size = Vector3(6.18094, 5, 0.307556)
+
+[node name="Meuble" type="Node3D" parent="."]
+
+[node name="Bureau" type="Node3D" parent="Meuble"]
+
+[node name="Pied" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0516, 0.577971, 0.241023)
+size = Vector3(0.121948, 0.674961, 0.144775)
+
+[node name="Pied2" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0516, 0.577971, -0.952093)
+size = Vector3(0.121948, 0.674961, 0.144775)
+
+[node name="Bureau" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09475, 1, -0.357612)
+size = Vector3(0.890625, 0.18, 1.3302)
+
+[node name="Bureau2" type="CSGBox3D" parent="Meuble/Bureau"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09475, 0.686846, 0.4382)
+size = Vector3(0.890625, 0.806309, 0.373322)
+
+[node name="Chaise" type="Node3D" parent="Meuble"]
+
+[node name="Siège" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14901, 0.60491, -0.335746)
+size = Vector3(0.462402, 0.18, 0.585724)
+
+[node name="Siège3" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14901, 0.60491, -0.335746)
+flip_faces = true
+size = Vector3(0.462402, 0.18, 0.585724)
+
+[node name="Siège2" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.885249, 0.900448, -0.335746)
+size = Vector3(0.215881, 0.771074, 0.585724)
+
+[node name="Pied1" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10455, 0.488378, -0.321987)
+size = Vector3(0.120949, 0.394471, 0.152168)
+
+[node name="Pied2" type="CSGBox3D" parent="Meuble/Chaise"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11519, 0.267299, -0.310887)
+size = Vector3(0.378138, 0.123627, 0.485857)
+
+[node name="PC" type="Node3D" parent="Meuble"]
+
+[node name="Pied1" type="CSGBox3D" parent="Meuble/PC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.31611, 1.04758, -0.360294)
+size = Vector3(0.378138, 0.123627, 0.485857)
+
+[node name="Pied2" type="CSGBox3D" parent="Meuble/PC"]
+transform = Transform3D(0.934391, -0.356249, 0, 0.356249, 0.934391, 0, 0, 0, 1, 2.4179, 1.16169, -0.398154)
+size = Vector3(0.112357, 0.351853, 0.250886)
+
+[node name="Ecran" type="CSGBox3D" parent="Meuble/PC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.31997, 1.5014, -0.381354)
+size = Vector3(0.054961, 0.550396, 0.769658)
+
+[node name="PC2" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.566752, 0.224094, 1.10537)
+
+[node name="Lampe" type="CSGBox3D" parent="Meuble/PC2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39368, 2.63922, -1.63596)
+size = Vector3(0.378138, 0.50322, 0.485857)
+material = SubResource("StandardMaterial3D_e2tp5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Meuble/PC2/Lampe"]
+light_color = Color(1, 1, 0.831373, 1)
