@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cg0naidxidamy"]
+[gd_scene load_steps=20 format=3 uid="uid://cg0naidxidamy"]
 
 [ext_resource type="Shader" path="res://Assets/Texture/Pixelization.gdshader" id="2_vwbbr"]
 [ext_resource type="Shader" path="res://Assets/Texture/CellShading.gdshader" id="3_dodig"]
@@ -11,7 +11,8 @@
 [ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="7_5s2cd"]
 [ext_resource type="Material" uid="uid://5dncish0kcfi" path="res://Assets/Material/MatEnviro/ToonMatFenêtre.tres" id="8_f686b"]
 [ext_resource type="Material" uid="uid://dsig0nxyu7nju" path="res://Assets/Material/MatEnviro/ToonMatBureau.tres" id="9_3g4hl"]
-[ext_resource type="PackedScene" uid="uid://4hjagf6jtpul" path="res://Assets/FBX/Crocs_02.fbx" id="12_he6wh"]
+[ext_resource type="Material" uid="uid://8vow8jw4hk4m" path="res://Assets/Material/MatMeme/ToonMatCrocs.tres" id="12_60eax"]
+[ext_resource type="ArrayMesh" uid="uid://38ycsrweyl6x" path="res://Assets/FBX/Crocs_03.obj" id="12_m7opg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xl5h"]
 render_priority = 0
@@ -270,12 +271,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173539, -0.28202, -0.17747)
 light_color = Color(1, 1, 0.831373, 1)
 light_energy = 0.5
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Background" type="Sprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0918092, 1.47214, -4.9355)
 lod_bias = 0.001
 ignore_occlusion_culling = true
 gi_mode = 0
 texture = ExtResource("5_1cab1")
 
-[node name="Root Scene" parent="." instance=ExtResource("12_he6wh")]
-transform = Transform3D(7.23594, 0, -6.90226, 0, 10, 0, 6.90226, 0, 7.23594, 1.93511, 0.260942, -0.123558)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0512313, 0, -0.0858799, 0, 0.1, 0, 0.0858799, 0, 0.0512313, 1.93757, 0.225482, -0.322536)
+material_override = ExtResource("12_60eax")
+mesh = ExtResource("12_m7opg")

@@ -2,3 +2,6 @@
 
 [resource]
 diffuse_mode = 3
+disable_fog = true
+albedo_color = Color(0.839216, 0.839216, 0.788235, 1)
+normal_scale = -0.75
