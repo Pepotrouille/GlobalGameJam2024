@@ -51,11 +51,14 @@ func _change_icon(type_of_object):
 			Game.TYPE_OBJECTS.FLEUR:
 				$Cases/icon1.texture = fleur_icon
 				fleur_found = true
+				$FleurCat._meme_appear()
 			Game.TYPE_OBJECTS.TOURNE_DISQUE:
 				$Cases/icon2.texture = tourne_disque_icon
 				tourne_disque_found = true
+				$TourneDisqueCat._meme_appear()
 			Game.TYPE_OBJECTS.CROCS:
 				$Cases/icon3.texture = crocs_icon
 				crocs_found = true
+				$CrocsCat._meme_appear()
 
 

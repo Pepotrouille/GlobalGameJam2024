@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwa3uhbqwok57"]
+[gd_scene load_steps=6 format=3 uid="uid://bwa3uhbqwok57"]
 
 [ext_resource type="Texture2D" uid="uid://ch45dw7vqyggs" path="res://Assets/placeholder/Cases.png" id="1_0pa2m"]
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_mbe7k"]
 [ext_resource type="Texture2D" uid="uid://clm6r5dp1mwta" path="res://Assets/placeholder/icon4.png" id="2_skgrt"]
 [ext_resource type="Texture2D" uid="uid://b47lk01dxravm" path="res://Assets/placeholder/meme_crocs.png" id="4_m8rda"]
 [ext_resource type="Script" path="res://Scenes/UI/AnimatedMeme.gd" id="5_7o2po"]
-[ext_resource type="Texture2D" uid="uid://c6blg7fdj8ltw" path="res://Assets/placeholder/meme_fleur.jpg" id="6_ndsni"]
-[ext_resource type="Texture2D" uid="uid://c1wvisdg53ax1" path="res://Assets/placeholder/meme_tourne_disque.png" id="7_c13ox"]
 
 [node name="GUI" type="Control"]
 clip_contents = true
@@ -67,24 +65,7 @@ offset_bottom = -18.0
 texture = ExtResource("2_skgrt")
 
 [node name="CrocsCat" type="Sprite2D" parent="."]
-position = Vector2(886, 1500)
+position = Vector2(886, 1399)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("4_m8rda")
 script = ExtResource("5_7o2po")
-pos_out_of_screen = 1500
-pos_middle = 700
-
-[node name="FleurCat" type="Sprite2D" parent="."]
-position = Vector2(886, 1400)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("6_ndsni")
-script = ExtResource("5_7o2po")
-pos_middle = 500
-
-[node name="TourneDisqueCat" type="Sprite2D" parent="."]
-position = Vector2(886, 1300)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_c13ox")
-script = ExtResource("5_7o2po")
-pos_out_of_screen = 1300
-pos_middle = 500
