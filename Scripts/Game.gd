@@ -32,9 +32,7 @@ func _input(event):
 		var type = $cursor._click_happenned(event)
 		if type:
 			$"Scene/Meuble/Chaise/Chaise avec man/AnimationPlayer".play("Take 001")
-		var end_game = var end_game = $CanvasLayer/GUI._change_icon(type)
-		if end_game:
-			game_is_finished = end_game
+		var end_game = $CanvasLayer/GUI._change_icon(type)
 		if end_game:
 			game_is_finished = end_game
 	
