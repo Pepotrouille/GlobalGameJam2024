@@ -6,6 +6,9 @@ var fleur_icon = load("res://Assets/placeholder/icon1.png")
 var tourne_disque_icon = load("res://Assets/placeholder/icon2.png")
 var crocs_icon = load("res://Assets/placeholder/icon3.png")
 
+var fleur_found = false
+var tourne_disque_found = false
+var crocs_found = false
 
 
 """ Test icons
@@ -39,29 +42,20 @@ func _unhandled_input(event):
 
 #--------------icons management-------------
 
-func _change_icon_1(type_of_object):
-	$Cases/icon1.texture = get_right_icon(type_of_object)
-
-func _change_icon_2(type_of_object):
-	$Cases/icon2.texture = get_right_icon(type_of_object)
-
-func _change_icon_3(type_of_object):
-	$Cases/icon3.texture = get_right_icon(type_of_object)
-
-
-#CHANGER LES INT PAR clickable_object.TYPE_OBJECT
-func get_right_icon(type_of_object):
+func _change_icon(type_of_object):
 	var icon = null
 	#if type_of_object is clickable_object.type_object
 	if type_of_object is Game.TYPE_OBJECTS:
 		
 		match type_of_object:
-			Game.TYPE_OBJECTS.NONE:
-				icon = none_icon
 			Game.TYPE_OBJECTS.FLEUR:
-				icon = fleur_icon
+				$Cases/icon1.texture = fleur_icon
+				fleur_found = true
 			Game.TYPE_OBJECTS.TOURNE_DISQUE:
-				icon = tourne_disque_icon
+				$Cases/icon2.texture = tourne_disque_icon
+				tourne_disque_found = true
 			Game.TYPE_OBJECTS.CROCS:
-				icon = crocs_icon
-	return icon
+				$Cases/icon3.texture = crocs_icon
+				crocs_found = true
+
+

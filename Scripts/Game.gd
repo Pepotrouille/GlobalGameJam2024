@@ -12,3 +12,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _change_icon(type_of_object):
+	$CanvasLayer/GUI._change_icon(type_of_object)
+
+func _input(event):
+	if event is InputEventMouseButton:
+		var type = $cursor._click_happenned(event)
+		$CanvasLayer/GUI._change_icon(type)
+	
