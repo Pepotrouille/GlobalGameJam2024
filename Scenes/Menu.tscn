@@ -11,15 +11,15 @@ texture = ExtResource("1_s6c2g")
 centered = false
 
 [node name="StartButton" type="Button" parent="."]
-offset_left = 117.0
-offset_top = 436.0
-offset_right = 288.0
-offset_bottom = 539.0
+offset_left = 171.0
+offset_top = 184.0
+offset_right = 342.0
+offset_bottom = 287.0
 text = "Start"
 
 [node name="CreditButton" type="Button" parent="."]
-offset_left = 121.0
-offset_top = 617.0
-offset_right = 292.0
-offset_bottom = 720.0
+offset_left = 175.0
+offset_top = 383.0
+offset_right = 346.0
+offset_bottom = 486.0
 text = "Credits"
