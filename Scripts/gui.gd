@@ -53,15 +53,15 @@ func _change_icon_3(type_of_object):
 func get_right_icon(type_of_object):
 	var icon = null
 	#if type_of_object is clickable_object.type_object
-	if type_of_object is int:
+	if type_of_object is Game.TYPE_OBJECTS:
 		
 		match type_of_object:
-			0:
+			Game.TYPE_OBJECTS.NONE:
 				icon = none_icon
-			1:
+			Game.TYPE_OBJECTS.FLEUR:
 				icon = fleur_icon
-			2:
+			Game.TYPE_OBJECTS.TOURNE_DISQUE:
 				icon = tourne_disque_icon
-			3:
+			Game.TYPE_OBJECTS.CROCS:
 				icon = crocs_icon
 	return icon
