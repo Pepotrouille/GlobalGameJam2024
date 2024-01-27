@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cua6n3crbf07d"]
+[gd_scene load_steps=4 format=3 uid="uid://cua6n3crbf07d"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_kcl5f"]
 [ext_resource type="Texture2D" uid="uid://clsssn8p1g31l" path="res://Assets/uwu_bg.png" id="1_s6c2g"]
+[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/cursor.tscn" id="3_du5ce"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_kcl5f")
@@ -11,15 +12,17 @@ texture = ExtResource("1_s6c2g")
 centered = false
 
 [node name="StartButton" type="Button" parent="."]
-offset_left = 171.0
-offset_top = 184.0
-offset_right = 342.0
-offset_bottom = 287.0
+offset_left = 117.0
+offset_top = 244.0
+offset_right = 288.0
+offset_bottom = 347.0
 text = "Start"
 
 [node name="CreditButton" type="Button" parent="."]
-offset_left = 175.0
-offset_top = 383.0
-offset_right = 346.0
-offset_bottom = 486.0
+offset_left = 121.0
+offset_top = 425.0
+offset_right = 292.0
+offset_bottom = 528.0
 text = "Credits"
+
+[node name="cursor" parent="." instance=ExtResource("3_du5ce")]

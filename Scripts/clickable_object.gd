@@ -1,13 +1,11 @@
 extends Area2D
 
+
 static var hovered_object
 
 var is_hovered = false
 
-#Types d'objet
-enum type_object {FLEUR, TOURNE_DISQUE, CROCS}
-
-@export var type = type_object.FLEUR
+@export var type = Game.TYPE_OBJECTS.FLEUR
 
 
 # Called when the node enters the scene tree for the first time.
