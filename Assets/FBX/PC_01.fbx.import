@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cuydeo1jve7tn"
-path="res://.godot/imported/Tourne_Disque.fbx-cf653a93b54178b2c111e588eb5bcc7f.scn"
+uid="uid://hqcnsfk64asa"
+path="res://.godot/imported/PC_01.fbx-d8b1db6e55ea18c04087625c4bf85da6.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Tourne_Disque.fbx"
-dest_files=["res://.godot/imported/Tourne_Disque.fbx-cf653a93b54178b2c111e588eb5bcc7f.scn"]
+source_file="res://Assets/FBX/PC_01.fbx"
+dest_files=["res://.godot/imported/PC_01.fbx-d8b1db6e55ea18c04087625c4bf85da6.scn"]
 
 [params]
 
@@ -29,6 +29,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"DefaultMaterial": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Material/MatEnviro/ToonMatPC.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
