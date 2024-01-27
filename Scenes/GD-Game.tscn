@@ -1,18 +1,34 @@
-[gd_scene load_steps=20 format=3 uid="uid://cg0naidxidamy"]
+[gd_scene load_steps=36 format=3 uid="uid://cg0naidxidamy"]
 
+[ext_resource type="Texture2D" uid="uid://co15m515en4q6" path="res://Assets/Texture/Background.jpg" id="1_rv3rp"]
 [ext_resource type="Shader" path="res://Assets/Texture/Pixelization.gdshader" id="2_vwbbr"]
 [ext_resource type="Shader" path="res://Assets/Texture/CellShading.gdshader" id="3_dodig"]
 [ext_resource type="Texture2D" uid="uid://bdg1kaaxh083r" path="res://icon.svg" id="3_iascx"]
 [ext_resource type="Material" uid="uid://trrb6dnkfdns" path="res://Assets/Material/MatEnviro/ToonMat.tres" id="4_kohj6"]
-[ext_resource type="Texture2D" uid="uid://q6j1n30jo4ph" path="res://Assets/Texture/Background.png" id="5_1cab1"]
 [ext_resource type="Material" uid="uid://bcbro2dqv2vyy" path="res://Assets/Material/MatEnviro/ToonMatSol.tres" id="5_j0tkv"]
 [ext_resource type="Material" uid="uid://cslxmn7ivd8cg" path="res://Assets/Material/MatEnviro/ToonMatTapis.tres" id="5_sd34p"]
-[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDRoite.tres" id="6_sjkq8"]
-[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="7_5s2cd"]
+[ext_resource type="Material" uid="uid://cww2chxdfrocs" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="7_5s2cd"]
+[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDroite.tres" id="7_m6r0k"]
 [ext_resource type="Material" uid="uid://5dncish0kcfi" path="res://Assets/Material/MatEnviro/ToonMatFenêtre.tres" id="8_f686b"]
 [ext_resource type="Material" uid="uid://dsig0nxyu7nju" path="res://Assets/Material/MatEnviro/ToonMatBureau.tres" id="9_3g4hl"]
+[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurFace.tres" id="9_yg1a5"]
+[ext_resource type="PackedScene" uid="uid://omq0elugdwe8" path="res://Assets/FBX/Desk_01.fbx" id="10_gqubr"]
+[ext_resource type="PackedScene" uid="uid://cv8xe1ayuuohc" path="res://Assets/FBX/Chaise_Bureau.fbx" id="10_votf7"]
 [ext_resource type="Material" uid="uid://8vow8jw4hk4m" path="res://Assets/Material/MatMeme/ToonMatCrocs.tres" id="12_60eax"]
 [ext_resource type="ArrayMesh" uid="uid://38ycsrweyl6x" path="res://Assets/FBX/Crocs_03.obj" id="12_m7opg"]
+[ext_resource type="PackedScene" uid="uid://hqcnsfk64asa" path="res://Assets/FBX/PC_01.fbx" id="13_nojta"]
+[ext_resource type="PackedScene" uid="uid://coiy1um4qm3iw" path="res://Assets/FBX/Boug_Assis_01.fbx" id="14_a2wbp"]
+[ext_resource type="Texture2D" uid="uid://cupi0764fqwj4" path="res://Assets/Texture/Tableau/Chat1.jpg" id="14_c1cri"]
+[ext_resource type="Texture2D" uid="uid://b6ye67jcdnd72" path="res://Assets/Texture/Tableau/Chat2.jpg" id="15_h3xt4"]
+[ext_resource type="PackedScene" uid="uid://cj5121fv01fhd" path="res://Assets/FBX/Armoire_Etagere_01.fbx" id="15_jd64n"]
+[ext_resource type="Texture2D" uid="uid://bfm0uu4mrv23o" path="res://Assets/Texture/Tableau/Chat3.jpg" id="16_g1rio"]
+[ext_resource type="Texture2D" uid="uid://b0hfddonttev5" path="res://Assets/Texture/Tableau/Chat4.jpg" id="17_iu1sl"]
+[ext_resource type="Texture2D" uid="uid://jx61jis2y7ds" path="res://Assets/Texture/Tableau/Chat5.jpg" id="18_k7r5b"]
+[ext_resource type="Texture2D" uid="uid://boihw7480u778" path="res://Assets/Texture/Tableau/Chat6.jpg" id="19_vvwut"]
+[ext_resource type="Texture2D" uid="uid://c01qns1sx1slw" path="res://Assets/Texture/Tableau/Chat7.jpg" id="20_y40g2"]
+[ext_resource type="PackedScene" uid="uid://c4lu21hjx7hm4" path="res://Assets/FBX/Tourne_Disque (1).fbx" id="26_ku4pk"]
+[ext_resource type="PackedScene" uid="uid://ba1203ogrivle" path="res://Assets/FBX/Pot_Fleur.fbx" id="27_dnjvt"]
+[ext_resource type="PackedScene" uid="uid://bdo24xmwubeic" path="res://Assets/FBX/Cat_01.fbx" id="28_rcem6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xl5h"]
 render_priority = 0
@@ -71,6 +87,13 @@ light_angular_distance = 0.25
 shadow_enabled = true
 shadow_blur = 0.0
 
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0918092, 1.47214, -4.9355)
+lod_bias = 0.001
+ignore_occlusion_culling = true
+gi_mode = 0
+texture = ExtResource("1_rv3rp")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.936758, 0.073362, -0.342203, -1.7643e-09, 0.977783, 0.209619, 0.349978, -0.196362, 0.915946, -1.0641, 1.67282, 1.66085)
 current = true
@@ -102,12 +125,12 @@ size = Vector3(6, 0.5, 4)
 
 [node name="Mur Droite" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74537, 2.25898, -0.0167141)
-material_override = ExtResource("6_sjkq8")
+material_override = ExtResource("7_m6r0k")
 size = Vector3(0.5, 4, 4)
 
 [node name="Mur Gauche" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8629, 2.226, -0.222249)
-material_override = ExtResource("4_kohj6")
+material_override = ExtResource("7_5s2cd")
 size = Vector3(0.302002, 5, 4.5155)
 
 [node name="Mur Arrière" type="CSGBox3D" parent="Pièce"]
@@ -123,27 +146,27 @@ size = Vector3(6, 5, 0.5)
 
 [node name="Mur Av Dessous" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0511777, 0.130785, -2.23)
-material_override = ExtResource("7_5s2cd")
+material_override = ExtResource("9_yg1a5")
 size = Vector3(5.96436, 0.80957, 0.5)
 
 [node name="Mur Av Dessus" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0511777, 2.87697, -2.21511)
-material_override = ExtResource("7_5s2cd")
+material_override = ExtResource("9_yg1a5")
 size = Vector3(5.96436, 0.9375, 0.470215)
 
 [node name="Mur Av Droite" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18088, 2.226, -2.23)
-material_override = ExtResource("7_5s2cd")
+material_override = ExtResource("9_yg1a5")
 size = Vector3(1.50024, 5, 0.5)
 
 [node name="Mur Av Gauche" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4013, 2.226, -2.23)
-material_override = ExtResource("7_5s2cd")
+material_override = ExtResource("9_yg1a5")
 size = Vector3(0.746338, 5, 0.5)
 
 [node name="Mur Av Milieu" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.364312, 2.226, -2.23)
-material_override = ExtResource("7_5s2cd")
+material_override = ExtResource("9_yg1a5")
 size = Vector3(1.49731, 5, 0.5)
 
 [node name="Fenêtre" type="Node3D" parent="Pièce"]
@@ -180,48 +203,190 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17732, 0.905424, -0.261855)
 
 [node name="Pied2" type="CSGBox3D" parent="Meuble/Bureau"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0773618, -0.318594, -0.815569)
+visible = false
 material_override = ExtResource("9_3g4hl")
 size = Vector3(0.121948, 0.674961, 0.144775)
 
 [node name="Bureau" type="CSGBox3D" parent="Meuble/Bureau"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.263198)
+visible = false
 material_override = ExtResource("9_3g4hl")
 size = Vector3(0.890625, 0.18, 1.3302)
 
 [node name="Bureau2" type="CSGBox3D" parent="Meuble/Bureau"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00637126, -0.315598, 0.574724)
+visible = false
 material_override = ExtResource("9_3g4hl")
 size = Vector3(0.890625, 0.806309, 0.373322)
+
+[node name="Bureau3" parent="Meuble/Bureau" instance=ExtResource("10_gqubr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.643447, 0)
 
 [node name="Chaise" type="Node3D" parent="Meuble"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41297, 0.686197, -0.293551)
 
-[node name="Siège" type="CSGBox3D" parent="Meuble/Chaise"]
-material_override = ExtResource("4_kohj6")
-size = Vector3(0.462402, 0.18, 0.585724)
+[node name="ChaiseFBX" parent="Meuble/Chaise" instance=ExtResource("10_votf7")]
+transform = Transform3D(-0.00757471, 0, 0.999971, 0, 1, 0, -0.999971, 0, -0.00757471, 0.0141646, -0.444459, -0.146247)
+visible = false
 
-[node name="Siège2" type="CSGBox3D" parent="Meuble/Chaise"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260483, 0.40959, 0)
-material_override = ExtResource("4_kohj6")
-size = Vector3(0.106049, 0.99918, 0.585724)
-
-[node name="Pied1" type="CSGBox3D" parent="Meuble/Chaise"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0245247, -0.180901, 0.0467253)
-material_override = ExtResource("4_kohj6")
-size = Vector3(0.120949, 0.394471, 0.152168)
-
-[node name="Pied2" type="CSGBox3D" parent="Meuble/Chaise"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0138867, -0.40198, 0.0578253)
-material_override = ExtResource("4_kohj6")
-size = Vector3(0.378138, 0.123627, 0.485857)
+[node name="Chaise avec man" parent="Meuble/Chaise" instance=ExtResource("14_a2wbp")]
+transform = Transform3D(0.0232631, 0, 0.999729, 0, 1, 0, -0.999729, 0, 0.0232631, 0.098262, -0.421486, -0.0913823)
 
 [node name="Rangement" type="Node3D" parent="Meuble"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.426955, 0.530948, -1.49574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.427845, 0.530948, -1.4122)
 
 [node name="Rangement" type="CSGBox3D" parent="Meuble/Rangement"]
 material_override = ExtResource("4_kohj6")
-size = Vector3(0.944301, 0.691818, 0.719369)
+size = Vector3(1, 0.7, 0.7)
 material = ExtResource("4_kohj6")
+
+[node name="Armoire" type="Node3D" parent="Meuble"]
+transform = Transform3D(0.999912, 0, -0.0132467, 0, 1, 0, 0.0132467, 0, 0.999912, -2.15777, 0.530948, -0.999182)
+
+[node name="Rangement" type="CSGBox3D" parent="Meuble/Armoire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.347082, -0.143969, 0.307965)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.400373, 0.381939, 1.42121)
+material = ExtResource("4_kohj6")
+
+[node name="Rangement2" type="CSGBox3D" parent="Meuble/Armoire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.347082, 1.73804, 0.307965)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.400373, 0.116417, 1.42121)
+material = ExtResource("4_kohj6")
+
+[node name="Rangement5" type="CSGBox3D" parent="Meuble/Armoire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.364107, 1.23714, 0.307965)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.366324, 0.116417, 1.42121)
+material = ExtResource("4_kohj6")
+
+[node name="Rangement6" type="CSGBox3D" parent="Meuble/Armoire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367036, 0.613876, 0.307965)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.360465, 0.116417, 1.42121)
+material = ExtResource("4_kohj6")
+
+[node name="Rangement3" type="CSGBox3D" parent="Meuble/Armoire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3519, 0.784136, -0.304905)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.390738, 2.02422, 0.195467)
+material = ExtResource("4_kohj6")
+
+[node name="Rangement4" type="CSGBox3D" parent="Meuble/Armoire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.347082, 0.784136, 0.928058)
+visible = false
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.400373, 2.02422, 0.195467)
+material = ExtResource("4_kohj6")
+
+[node name="Armoire" parent="Meuble/Armoire" instance=ExtResource("15_jd64n")]
+transform = Transform3D(-0.0608918, 0, 0.998144, 0, 1, 0, -0.998144, 0, -0.0608918, -0.404124, -0.315169, 0.228476)
+
+[node name="Bordel" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6908, 0.557256, 1.06848)
+
+[node name="Cube 1" type="CSGBox3D" parent="Meuble/Bordel"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0.418641, -0.154147, -0.16843)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.400373, 0.381939, 0.468416)
+material = ExtResource("4_kohj6")
+
+[node name="Cube 2" type="CSGBox3D" parent="Meuble/Bordel"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0.418641, 0.229012, -0.16843)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.400373, 0.381939, 0.468416)
+material = ExtResource("4_kohj6")
+
+[node name="Cube 3" type="CSGBox3D" parent="Meuble/Bordel"]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0.483242, 0.605347, -0.202958)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.400373, 0.381939, 0.468416)
+material = ExtResource("4_kohj6")
+
+[node name="Arbre a chat" type="Node3D" parent="Meuble"]
+transform = Transform3D(-0.323026, 0, 0.94639, 0, 1, 0, -0.94639, 0, -0.323026, -1.57849, 0.252237, -1.44122)
+
+[node name="Basse" type="CSGBox3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015801, 0, 0.0826639)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.67224, 0.0430202, 0.633744)
+material = ExtResource("4_kohj6")
+
+[node name="3eme etage" type="CSGBox3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015801, 1.67344, 0.0826639)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.67224, 0.0430202, 0.633744)
+material = ExtResource("4_kohj6")
+
+[node name="2eme etage" type="CSGBox3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0664294, 0.995681, 0.261547)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.570983, 0.0430202, 0.275979)
+material = ExtResource("4_kohj6")
+
+[node name="1er etage" type="CSGBox3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015801, 0.484591, 0.0826639)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.67224, 0.0430202, 0.633744)
+material = ExtResource("4_kohj6")
+
+[node name="Tanière" type="CSGBox3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015801, 0.64858, -0.00474679)
+material_override = ExtResource("4_kohj6")
+size = Vector3(0.67224, 0.370997, 0.275385)
+material = ExtResource("4_kohj6")
+
+[node name="Barre 1" type="CSGCylinder3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931315, 0.24177, -0.0442876)
+radius = 0.029
+height = 0.51504
+
+[node name="Barre 2" type="CSGCylinder3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.246232, 0.88591, 0.296412)
+radius = 0.029
+height = 1.7
+
+[node name="Barre 3" type="CSGCylinder3D" parent="Meuble/Arbre a chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.246232, 0.88591, -0.00481868)
+radius = 0.029
+height = 1.7
+
+[node name="Tableau" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14412, 0.530948, -1.09562)
+
+[node name="Tableau Chat1" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0.014, 0, 0, 0, 0.014, 0, 0, 0, 0.014, 1.968, 1.69083, -0.859571)
+texture = ExtResource("14_c1cri")
+
+[node name="Tableau Chat2" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0.014, 0, 0, 0, 0.014, 0, 0, 0, 0.014, 1.66337, 0.840724, -0.859571)
+texture = ExtResource("15_h3xt4")
+
+[node name="Tableau Chat3" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0.014, 0, 0, 0, 0.014, 0, 0, 0, 0.014, 4.07461, 0.878164, -0.859571)
+texture = ExtResource("16_g1rio")
+
+[node name="Tableau Chat4" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0, 0, -0.014, 0, 0.014, 0, 0.014, 0, 0, 4.62378, 0.966106, -0.283355)
+texture = ExtResource("17_iu1sl")
+
+[node name="Tableau Chat5" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0, 0, -0.014, 0, 0.014, 0, 0.014, 0, 0, 4.62378, 1.20612, 1.14123)
+texture = ExtResource("18_k7r5b")
+
+[node name="Tableau Chat6" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0, 0, -0.014, 0, 0.014, 0, 0.014, 0, 0, 4.62378, 0.806467, 1.42539)
+texture = ExtResource("19_vvwut")
+
+[node name="Tableau Chat7" type="Sprite3D" parent="Meuble/Tableau"]
+transform = Transform3D(0, 0, -0.014, 0, 0.014, 0, 0.014, 0, 0, 4.62378, 1.12821, 1.83397)
+texture = ExtResource("20_y40g2")
 
 [node name="Tapis" type="Node3D" parent="Meuble"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.680276, 0.223888, 0.169993)
@@ -231,23 +396,96 @@ material_override = ExtResource("5_sd34p")
 size = Vector3(1.96923, 0.116802, 1.46134)
 material = ExtResource("4_kohj6")
 
+[node name="Etagère" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.680276, 0.223888, 0.169993)
+
+[node name="Etagère 1" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18571, 1.68133, -1.06566)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.255186, 0.116802, 1.16609)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère 2" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18571, 2.05519, -1.34689)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.255186, 0.116802, 1.16609)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 2.29542, 0.339688)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.116802, 1.25578)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère2" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 1.89083, 0.339688)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.116802, 1.25578)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère3" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 2.03668, -0.231581)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.408499, 0.11324)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère4" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 2.03668, 0.90794)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.408499, 0.11324)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère5" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 2.03668, 0.349572)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.408499, 0.0405067)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère6" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 2.03668, 0.0768561)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.408499, 0.0405067)
+material = ExtResource("4_kohj6")
+
+[node name="Etagère7" type="CSGBox3D" parent="Meuble/Etagère"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16419, 2.03668, 0.601792)
+material_override = ExtResource("5_sd34p")
+size = Vector3(0.406814, 0.408499, 0.0405067)
+material = ExtResource("4_kohj6")
+
 [node name="PC" type="Node3D" parent="Meuble"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27006, 1.39787, -0.517795)
 
 [node name="Pied1" type="CSGBox3D" parent="Meuble/PC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0162814, -0.352533, 0.0412962)
+visible = false
 material_override = ExtResource("4_kohj6")
 size = Vector3(0.378138, 0.123627, 0.485857)
 
 [node name="Pied2" type="CSGBox3D" parent="Meuble/PC"]
 transform = Transform3D(0.934391, -0.356249, 0, 0.356249, 0.934391, 0, 0, 0, 1, 0.0519316, -0.174546, 0.00343651)
+visible = false
 material_override = ExtResource("4_kohj6")
 size = Vector3(0.112357, 0.351853, 0.250886)
 
 [node name="Ecran" type="CSGBox3D" parent="Meuble/PC"]
 transform = Transform3D(0.989503, 0.144512, 0, -0.144512, 0.989503, 0, 0, 0, 1, -0.0411839, 0.0867881, 0)
+visible = false
 material_override = ExtResource("4_kohj6")
 size = Vector3(0.054961, 0.550396, 0.769658)
+
+[node name="Root Scene" parent="Meuble/PC" instance=ExtResource("13_nojta")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.403238, 0.0983006)
+
+[node name="Panier à chat" type="Node3D" parent="Meuble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27006, 0.438084, -1.7261)
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Meuble/Panier à chat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.483248, -0.0960118, 0.226217)
+inner_radius = 0.045
+outer_radius = 0.518
+sides = 15
+ring_sides = 8
 
 [node name="Lampe" type="Node3D" parent="Meuble"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23924, 2.37268, -0.829544)
@@ -271,14 +509,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173539, -0.28202, -0.17747)
 light_color = Color(1, 1, 0.831373, 1)
 light_energy = 0.5
 
-[node name="Background" type="Sprite3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0918092, 1.47214, -4.9355)
-lod_bias = 0.001
-ignore_occlusion_culling = true
-gi_mode = 0
-texture = ExtResource("5_1cab1")
+[node name="Meme" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0512313, 0, -0.0858799, 0, 0.1, 0, 0.0858799, 0, 0.0512313, 1.93757, 0.225482, -0.322536)
+[node name="Croccs" type="MeshInstance3D" parent="Meme"]
+transform = Transform3D(0.0858799, 0, 0.0512313, 0, 0.1, 0, -0.0512313, 0, 0.0858799, 1.96689, 0.229686, -0.712305)
 material_override = ExtResource("12_60eax")
 mesh = ExtResource("12_m7opg")
+skeleton = NodePath("../..")
+
+[node name="Tourne Disque" parent="Meme" instance=ExtResource("26_ku4pk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.486229, 0.896029, -1.42055)
+
+[node name="Plante" parent="Meme" instance=ExtResource("27_dnjvt")]
+transform = Transform3D(0.499402, 0.024451, 0, -0.024451, 0.499402, 0, 0, 0, 0.5, -2.56992, 0.259386, -1.56877)
+
+[node name="Chat" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.374989, 0.293417, 0.300439)
+
+[node name="Chat 1" parent="Chat" instance=ExtResource("28_rcem6")]
+transform = Transform3D(0.914544, 0, -0.404487, 0, 1, 0, 0.404487, 0, 0.914544, 0, 0, 0)
