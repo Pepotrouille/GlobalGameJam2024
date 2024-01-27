@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cua6n3crbf07d"]
+[gd_scene load_steps=5 format=3 uid="uid://cua6n3crbf07d"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_kcl5f"]
 [ext_resource type="Texture2D" uid="uid://clsssn8p1g31l" path="res://Assets/uwu_bg.png" id="1_s6c2g"]
-[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/cursor.tscn" id="3_du5ce"]
+[ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/Cursor.tscn" id="3_du5ce"]
+[ext_resource type="AudioStream" uid="uid://cjvksfsr2lueg" path="res://Assets/Sound/click_efleurement_menu_1.wav" id="3_ktffd"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_kcl5f")
@@ -26,3 +27,13 @@ offset_bottom = 528.0
 text = "Credits"
 
 [node name="cursor" parent="." instance=ExtResource("3_du5ce")]
+
+[node name="HoverButton" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(117, 244)
+stream = ExtResource("3_ktffd")
+area_mask = 0
+
+[connection signal="mouse_entered" from="StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="CreditButton" to="." method="_on_credit_button_mouse_entered"]
+[connection signal="pressed" from="CreditButton" to="." method="_on_credit_button_pressed"]
