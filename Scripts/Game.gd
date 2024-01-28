@@ -23,6 +23,8 @@ func _process(delta):
 			self.queue_free()
 			
 
+func _ready():
+	GlobalAudioStreamPlayer.play_sound($Ambiance.stream)
 
 func _change_icon(type_of_object):
 	$CanvasLayer/GUI._change_icon(type_of_object)

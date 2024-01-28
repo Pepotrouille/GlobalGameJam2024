@@ -2,9 +2,9 @@ extends Area2D
 
 #-----------Attributes--------------
 
-var cursor = load("res://Assets/placeholder/cursor.png")
-var cursor_interact = load("res://Assets/placeholder/cursor_interact.png")
-var cursor_interacting = load("res://Assets/placeholder/cursor_interact_2.png")
+@export var cursor = load("res://Assets/placeholder/cursor.png")
+@export var cursor_interact = load("res://Assets/placeholder/cursor_interact.png")
+@export var cursor_interacting = load("res://Assets/placeholder/cursor_interact_2.png")
 
 var can_interact : bool
 
@@ -19,7 +19,7 @@ func _ready():
 	$Sprite2D.texture = cursor
 	can_interact = false
 
-func _process(delta):
+func _process(_delta):
 	translate(get_local_mouse_position())
 
 
@@ -43,7 +43,7 @@ func _on_area_entered(area):
 	current_entered_area = area
 
 
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	switch_to_regular_cursor()
 	can_interact = false
 	current_entered_area = null
