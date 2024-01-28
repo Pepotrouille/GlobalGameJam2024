@@ -33,7 +33,7 @@ func _change_icon(type_of_object):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		var type = $cursor._click_happenned(event)
+		var type = Cursor._click_happenned(event)
 		if type:
 			$"Scene/Scene3D/Meuble/Chaise/Chaise avec man/AnimationPlayer".play("Take 001")
 			$"Scene/Scene3D/Chat/Chat_full/AnimationPlayer".play(TYPE_OBJECTS.keys()[type])
