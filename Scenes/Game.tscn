@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://nptwhshcgrwt"]
+[gd_scene load_steps=7 format=3 uid="uid://nptwhshcgrwt"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_4n5fk"]
 [ext_resource type="PackedScene" uid="uid://d11yf6gw6xe6u" path="res://Scenes/UI/Cursor.tscn" id="1_snrvy"]
 [ext_resource type="PackedScene" uid="uid://cg0naidxidamy" path="res://Scenes/GD-Game.tscn" id="3_u7mmu"]
 [ext_resource type="PackedScene" uid="uid://bwa3uhbqwok57" path="res://Scenes/UI/Gui.tscn" id="4_dmn0q"]
 [ext_resource type="PackedScene" uid="uid://blw74xabx2q87" path="res://Scenes/Objects/clickable_object.tscn" id="4_hcv4a"]
+[ext_resource type="AudioStream" uid="uid://u6hc38eeq0jp" path="res://Assets/Sound/Ambiance_city_surround_final_.ogg" id="6_p4xiu"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_4n5fk")
@@ -37,3 +38,7 @@ type = 2
 [node name="Fleur" parent="." instance=ExtResource("4_hcv4a")]
 position = Vector2(305, 622)
 scale = Vector2(1.5, 5)
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_p4xiu")
+volume_db = 6.0

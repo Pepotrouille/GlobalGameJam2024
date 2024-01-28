@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cg0naidxidamy"]
+[gd_scene load_steps=42 format=3 uid="uid://cg0naidxidamy"]
 
 [ext_resource type="Texture2D" uid="uid://co15m515en4q6" path="res://Assets/Texture/Background.jpg" id="1_rv3rp"]
 [ext_resource type="Shader" path="res://Assets/Texture/Pixelization.gdshader" id="2_vwbbr"]
@@ -10,7 +10,7 @@
 [ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDRoite.tres" id="7_m6r0k"]
 [ext_resource type="Material" uid="uid://5dncish0kcfi" path="res://Assets/Material/MatEnviro/ToonMatFenêtre.tres" id="8_f686b"]
 [ext_resource type="Material" uid="uid://dsig0nxyu7nju" path="res://Assets/Material/MatEnviro/ToonMatBureau.tres" id="9_3g4hl"]
-[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="9_yg1a5"]
+[ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurFace.tres" id="9_yg1a5"]
 [ext_resource type="PackedScene" uid="uid://omq0elugdwe8" path="res://Assets/FBX/Desk_01.fbx" id="10_gqubr"]
 [ext_resource type="PackedScene" uid="uid://cv8xe1ayuuohc" path="res://Assets/FBX/Chaise_Bureau.fbx" id="10_votf7"]
 [ext_resource type="Material" uid="uid://8vow8jw4hk4m" path="res://Assets/Material/MatMeme/ToonMatCrocs.tres" id="12_60eax"]
@@ -146,7 +146,6 @@ size = Vector3(0.5, 4, 4)
 
 [node name="Mur Gauche" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8629, 2.226, -0.222249)
-material_override = ExtResource("7_5s2cd")
 gi_lightmap_scale = 2
 size = Vector3(0.302002, 5, 4.5155)
 

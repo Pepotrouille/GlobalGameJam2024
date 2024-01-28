@@ -8,8 +8,3 @@ var is_hovered = false
 
 func get_type():
 	return type
-
-	
-	
-
-
