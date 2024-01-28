@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8c0kr87j245e"
-path.s3tc="res://.godot/imported/Balle_Base_color_04.png-e33843f2bcb8c8b1d471993fbf43801b.s3tc.ctex"
+uid="uid://crp5sanj45iuy"
+path.s3tc="res://.godot/imported/ManCasual3Color.png-7c9198eae2d65390176c5996fa7114d6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Texture/Balle/Balle_Base_color_04.png"
-dest_files=["res://.godot/imported/Balle_Base_color_04.png-e33843f2bcb8c8b1d471993fbf43801b.s3tc.ctex"]
+source_file="res://Assets/Texture/ManCasual3Color.png"
+dest_files=["res://.godot/imported/ManCasual3Color.png-7c9198eae2d65390176c5996fa7114d6.s3tc.ctex"]
 
 [params]
 

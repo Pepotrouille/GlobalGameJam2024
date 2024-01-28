@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coiy1um4qm3iw"
-path="res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"
+uid="uid://dffl70yhesml0"
+path="res://.godot/imported/Pot_De_Fleurs_01.fbx-715ecc3d17697a51f581ae7a550b8164.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Boug_Assis_01.fbx"
-dest_files=["res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"]
+source_file="res://Assets/FBX/Pot_De_Fleurs_01.fbx"
+dest_files=["res://.godot/imported/Pot_De_Fleurs_01.fbx-715ecc3d17697a51f581ae7a550b8164.scn"]
 
 [params]
 
@@ -33,11 +33,7 @@ _subresources={
 "materials": {
 "DefaultMaterial": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatChaise.tres"
-},
-"ManCasual3Material": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatMec.tres"
+"use_external/path": "res://Assets/Material/MatMeme/ToonMatPotDeFleur.tres"
 }
 }
 }

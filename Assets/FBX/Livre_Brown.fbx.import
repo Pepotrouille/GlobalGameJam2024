@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coiy1um4qm3iw"
-path="res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"
+uid="uid://4qy1dmy0nunx"
+path="res://.godot/imported/Livre_Brown.fbx-559b6a00411f2d5e08f525affdf35efe.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Boug_Assis_01.fbx"
-dest_files=["res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"]
+source_file="res://Assets/FBX/Livre_Brown.fbx"
+dest_files=["res://.godot/imported/Livre_Brown.fbx-559b6a00411f2d5e08f525affdf35efe.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=2.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -33,11 +33,7 @@ _subresources={
 "materials": {
 "DefaultMaterial": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatChaise.tres"
-},
-"ManCasual3Material": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatMec.tres"
+"use_external/path": "res://Assets/Material/Livre/ToonMatLivreBrown.tres"
 }
 }
 }

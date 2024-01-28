@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coiy1um4qm3iw"
-path="res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"
+uid="uid://ba1203ogrivle"
+path="res://.godot/imported/Pot_Fleur_Mauvais.fbx-0cf0c5f4bbd6d1bddb60021079bd9c33.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Boug_Assis_01.fbx"
-dest_files=["res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"]
+source_file="res://Assets/FBX/Pot_Fleur_Mauvais.fbx"
+dest_files=["res://.godot/imported/Pot_Fleur_Mauvais.fbx-0cf0c5f4bbd6d1bddb60021079bd9c33.scn"]
 
 [params]
 
@@ -29,17 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"materials": {
-"DefaultMaterial": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatChaise.tres"
-},
-"ManCasual3Material": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatMec.tres"
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

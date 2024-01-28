@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://buseqy3pdw26t"]
+
+[ext_resource type="Texture2D" uid="uid://dmvotfme5gp1o" path="res://Assets/Texture/Pot_De_Fleurs_Base_color.png" id="1_bq8jc"]
+
+[resource]
+diffuse_mode = 3
+disable_fog = true
+albedo_color = Color(0.839216, 0.839216, 0.788235, 1)
+albedo_texture = ExtResource("1_bq8jc")
+normal_scale = -0.75

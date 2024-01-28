@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coiy1um4qm3iw"
-path="res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"
+uid="uid://cwl2cqg2caavk"
+path="res://.godot/imported/Tourne_Disques_01.fbx-a49acf07b2623a765afa9e6df939cb5a.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Boug_Assis_01.fbx"
-dest_files=["res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"]
+source_file="res://Assets/FBX/Tourne_Disques_01.fbx"
+dest_files=["res://.godot/imported/Tourne_Disques_01.fbx-a49acf07b2623a765afa9e6df939cb5a.scn"]
 
 [params]
 
@@ -31,13 +31,9 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"DefaultMaterial": {
+"wire_214228153": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatChaise.tres"
-},
-"ManCasual3Material": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatMec.tres"
+"use_external/path": "res://Assets/Material/MatMeme/ToonMatTourneDisque.tres"
 }
 }
 }

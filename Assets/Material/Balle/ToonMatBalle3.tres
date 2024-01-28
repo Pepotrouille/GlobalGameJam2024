@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bg88dnqlmj25c"]
+
+[ext_resource type="Texture2D" uid="uid://c5v0lq54an61i" path="res://Assets/Texture/Balle/Balle_Base_color_03.png" id="1_3owkc"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_3owkc")

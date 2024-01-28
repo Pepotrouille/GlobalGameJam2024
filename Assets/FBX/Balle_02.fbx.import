@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coiy1um4qm3iw"
-path="res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"
+uid="uid://hy021oafrhyw"
+path="res://.godot/imported/Balle_02.fbx-706f001f42d4902614d95bbe5e94b167.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Boug_Assis_01.fbx"
-dest_files=["res://.godot/imported/Boug_Assis_01.fbx-8e381587fe235e02a1de134d580fa425.scn"]
+source_file="res://Assets/FBX/Balle_02.fbx"
+dest_files=["res://.godot/imported/Balle_02.fbx-706f001f42d4902614d95bbe5e94b167.scn"]
 
 [params]
 
@@ -33,11 +33,7 @@ _subresources={
 "materials": {
 "DefaultMaterial": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatChaise.tres"
-},
-"ManCasual3Material": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/Material/MatEnviro/ToonMatMec.tres"
+"use_external/path": "res://Assets/Material/Balle/ToonMatBalle2.tres"
 }
 }
 }
