@@ -33,7 +33,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		var type = $cursor._click_happenned(event)
 		if type:
-			$"Scene/Meuble/Chaise/Chaise avec man/AnimationPlayer".play("Take 001")
+			$"Scene/Scene3D/Meuble/Chaise/Chaise avec man/AnimationPlayer".play("Take 001")
 		var end_game = $CanvasLayer/GUI._change_icon(type)
 		if end_game:
 			game_is_finished = end_game

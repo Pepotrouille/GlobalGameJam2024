@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdg1kaaxh083r" path="res://icon.svg" id="4_gbkxg"]
 [ext_resource type="Material" uid="uid://bcbro2dqv2vyy" path="res://Assets/Material/MatEnviro/ToonMatSol.tres" id="5_3qaxn"]
 [ext_resource type="Material" uid="uid://trrb6dnkfdns" path="res://Assets/Material/MatEnviro/ToonMat.tres" id="6_b3flo"]
-[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDroite.tres" id="7_ydu4i"]
+[ext_resource type="Material" uid="uid://dehon131isc57" path="res://Assets/Material/MatEnviro/ToonMatMurDroite.tres" id="7_kjv3f"]
 [ext_resource type="Material" uid="uid://cww2chxdfrocs" path="res://Assets/Material/MatEnviro/ToonMatMurGauche.tres" id="8_ljogp"]
 [ext_resource type="Material" uid="uid://bt4x7pac32ywg" path="res://Assets/Material/MatEnviro/ToonMatMurFace.tres" id="9_p0gwe"]
 [ext_resource type="Material" uid="uid://5dncish0kcfi" path="res://Assets/Material/MatEnviro/ToonMatFenêtre.tres" id="10_8xgda"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://coiy1um4qm3iw" path="res://Assets/FBX/Boug_Assis_01.fbx" id="14_hlmy2"]
 [ext_resource type="PackedScene" uid="uid://dn3suoq33u5mq" path="res://Assets/FBX/Commode_01.fbx" id="15_ogggm"]
 [ext_resource type="PackedScene" uid="uid://cj5121fv01fhd" path="res://Assets/FBX/Armoire_Etagere_01.fbx" id="16_y8n8y"]
-[ext_resource type="Material" uid="uid://b2q34f7clvul2" path="res://Assets/Material/MatEnviro/ToonMatCube.tres" id="17_7hffm"]
+[ext_resource type="Material" path="res://Assets/Material/MatEnviro/ToonMatCube.tres" id="17_7hffm"]
 [ext_resource type="PackedScene" uid="uid://bl32b85dxan7w" path="res://Assets/FBX/Arbre_A_Chat_01.fbx" id="18_sgagr"]
 [ext_resource type="Texture2D" uid="uid://cupi0764fqwj4" path="res://Assets/Texture/Tableau/Chat1.jpg" id="19_ovank"]
 [ext_resource type="Texture2D" uid="uid://b6ye67jcdnd72" path="res://Assets/Texture/Tableau/Chat2.jpg" id="20_h18qp"]
@@ -45,7 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://cmtlfvlox6hsv" path="res://Assets/FBX/Livre_Violet.fbx" id="43_bg2gp"]
 [ext_resource type="PackedScene" uid="uid://181lced73ois" path="res://Assets/FBX/Livre_Yellow.fbx" id="44_cacns"]
 [ext_resource type="PackedScene" uid="uid://dfk8iwskeon2b" path="res://Assets/FBX/Aquarium_01.fbx" id="45_b67ex"]
-[ext_resource type="ArrayMesh" uid="uid://dqn5foljxd1ig" path="res://Assets/FBX/Bubulle.res" id="46_dilqi"]
+[ext_resource type="ArrayMesh" uid="uid://dcvjs12pwmgru" path="res://Assets/FBX/Bubulle.res" id="46_dilqi"]
 [ext_resource type="Material" uid="uid://8vow8jw4hk4m" path="res://Assets/Material/MatMeme/ToonMatCrocs.tres" id="47_yu4t2"]
 [ext_resource type="ArrayMesh" uid="uid://38ycsrweyl6x" path="res://Assets/FBX/Crocs_03.obj" id="48_6mwkn"]
 [ext_resource type="PackedScene" uid="uid://cwl2cqg2caavk" path="res://Assets/FBX/Tourne_Disques_01.fbx" id="49_ucpxy"]
@@ -156,7 +156,7 @@ size = Vector3(6, 0.5, 4)
 
 [node name="Mur Droite" type="CSGBox3D" parent="Pièce"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74537, 1.73841, -0.0167141)
-material_override = ExtResource("7_ydu4i")
+material_override = ExtResource("7_kjv3f")
 gi_lightmap_scale = 2
 size = Vector3(0.5, 2.95886, 4)
 
