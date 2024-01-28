@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://iikxbk3qbvr7"]
+
+[ext_resource type="Texture2D" uid="uid://bq0dpdq6oq7ty" path="res://Assets/Texture/Livre/Livre_Base_color_04.png" id="1_s3ld6"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_s3ld6")

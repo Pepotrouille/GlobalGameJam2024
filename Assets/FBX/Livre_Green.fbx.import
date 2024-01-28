@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4lu21hjx7hm4"
-path="res://.godot/imported/Tourne_Disque (1).fbx-cde50416332b016b500da5ec7a92d10c.scn"
+uid="uid://dqhsgq4pvlu0r"
+path="res://.godot/imported/Livre_Green.fbx-ff8cd90ff447ea36a0001ab35ef75e30.scn"
 
 [deps]
 
-source_file="res://Assets/FBX/Tourne_Disque (1).fbx"
-dest_files=["res://.godot/imported/Tourne_Disque (1).fbx-cde50416332b016b500da5ec7a92d10c.scn"]
+source_file="res://Assets/FBX/Livre_Green.fbx"
+dest_files=["res://.godot/imported/Livre_Green.fbx-ff8cd90ff447ea36a0001ab35ef75e30.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=2.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -29,6 +29,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"DefaultMaterial": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Material/Livre/ToonMatLivreGreen.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
