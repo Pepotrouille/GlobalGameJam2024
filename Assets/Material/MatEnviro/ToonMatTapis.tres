@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cslxmn7ivd8cg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Texture/Tapis_Base_color.png" id="1_3fdve"]
+[ext_resource type="Texture2D" uid="uid://d368y0sby8ew3" path="res://Assets/Texture/Tapis_Base_color.png" id="1_3fdve"]
 
 [resource]
 diffuse_mode = 3
