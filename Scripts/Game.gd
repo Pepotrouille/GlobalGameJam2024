@@ -12,6 +12,8 @@ const TIMER_MAX = 70
 
 #-----------------Methods--------------
 
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if game_is_finished:
@@ -24,6 +26,7 @@ func _process(delta):
 
 func _ready():
 	GlobalAudioStreamPlayer.play_sound($Ambiance.stream)
+	$"Scene/Scene3D/Chat/Chat_full/AnimationPlayer".play("IDLE")
 
 func _change_icon(type_of_object):
 	$CanvasLayer/GUI._change_icon(type_of_object)
@@ -33,6 +36,9 @@ func _input(event):
 		var type = $cursor._click_happenned(event)
 		if type:
 			$"Scene/Scene3D/Meuble/Chaise/Chaise avec man/AnimationPlayer".play("Take 001")
+			$"Scene/Scene3D/Chat/Chat_full/AnimationPlayer".play(TYPE_OBJECTS.keys()[type])
+			await $"Scene/Scene3D/Chat/Chat_full/AnimationPlayer".animation_finished
+			$"Scene/Scene3D/Chat/Chat_full/AnimationPlayer".play("IDLE")
 		var end_game = $CanvasLayer/GUI._change_icon(type)
 		if end_game:
 			game_is_finished = end_game
