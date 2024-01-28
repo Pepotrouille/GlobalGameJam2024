@@ -11,35 +11,6 @@ var tourne_disque_found = false
 var crocs_found = false
 
 
-""" Test icons
-func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_A:
-			_change_icon_1(0)
-		if event.pressed and event.keycode == KEY_Z:
-			_change_icon_1(1)
-		if event.pressed and event.keycode == KEY_E:
-			_change_icon_1(2)
-		if event.pressed and event.keycode == KEY_R:
-			_change_icon_1(3)
-		if event.pressed and event.keycode == KEY_Q:
-			_change_icon_2(0)
-		if event.pressed and event.keycode == KEY_S:
-			_change_icon_2(1)
-		if event.pressed and event.keycode == KEY_D:
-			_change_icon_2(2)
-		if event.pressed and event.keycode == KEY_F:
-			_change_icon_2(3)
-		if event.pressed and event.keycode == KEY_W:
-			_change_icon_3(0)
-		if event.pressed and event.keycode == KEY_X:
-			_change_icon_3(1)
-		if event.pressed and event.keycode == KEY_C:
-			_change_icon_3(2)
-		if event.pressed and event.keycode == KEY_V:
-			_change_icon_3(3)
-"""
-
 #--------------icons management-------------
 
 func _change_icon(type_of_object):
@@ -65,3 +36,13 @@ func _change_icon(type_of_object):
 	return end_game
 
 
+func _reset():
+	fleur_found = false
+	tourne_disque_found = false
+	crocs_found = false
+	$Cases/icon1.texture = none_icon
+	$Cases/icon2.texture = none_icon
+	$Cases/icon3.texture = none_icon
+	$FleurCat._reset_timer()
+	$TourneDisqueCat._reset_timer()
+	$CrocsCat._reset_timer()
