@@ -1,26 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://d11yf6gw6xe6u"]
 
 [ext_resource type="Script" path="res://Scripts/Cursor.gd" id="1_3pyrl"]
-[ext_resource type="Texture2D" uid="uid://cmg0nu0sjwyne" path="res://Assets/placeholder/cursor.png" id="1_apgcc"]
-[ext_resource type="Texture2D" uid="uid://csdv4x75dt133" path="res://Assets/placeholder/cursor_interact.png" id="3_yhbep"]
-[ext_resource type="Texture2D" uid="uid://di2w2kf5c8s5y" path="res://Assets/placeholder/cursor_interact_2.png" id="4_w0pas"]
+[ext_resource type="Texture2D" uid="uid://r8nlvkgs7gbc" path="res://Assets/UI/cursor_regular.png" id="2_ro1ys"]
+[ext_resource type="Texture2D" uid="uid://bjo0imydjeb0d" path="res://Assets/UI/cursor_interact.png" id="3_88lsg"]
+[ext_resource type="Texture2D" uid="uid://da7axgaq7bnu7" path="res://Assets/UI/cursor_interacting.png" id="4_vay17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3g61"]
 
 [node name="Cursor" type="Area2D"]
 z_index = 5
 script = ExtResource("1_3pyrl")
-cursor = ExtResource("1_apgcc")
-cursor_interact = ExtResource("3_yhbep")
-cursor_interacting = ExtResource("4_w0pas")
+cursor = ExtResource("2_ro1ys")
+cursor_interact = ExtResource("3_88lsg")
+cursor_interacting = ExtResource("4_vay17")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_p3g61")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_apgcc")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ro1ys")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

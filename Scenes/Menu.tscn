@@ -1,30 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://cua6n3crbf07d"]
+[gd_scene load_steps=15 format=3 uid="uid://cua6n3crbf07d"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_kcl5f"]
-[ext_resource type="Texture2D" uid="uid://clsssn8p1g31l" path="res://Assets/uwu_bg.png" id="1_s6c2g"]
+[ext_resource type="Texture2D" uid="uid://60sq6m38htt6" path="res://Assets/UI/Menu_Start.png" id="2_7t1ia"]
+[ext_resource type="PackedScene" uid="uid://b2q7ecwb8ctns" path="res://Scenes/rules.tscn" id="3_450c4"]
 [ext_resource type="AudioStream" uid="uid://cjvksfsr2lueg" path="res://Assets/Sound/click_efleurement_menu_1.wav" id="3_ktffd"]
+[ext_resource type="Texture2D" uid="uid://dhi8amvdv760w" path="res://Assets/UI/Bouton_Start_01.png" id="5_ad5yg"]
 [ext_resource type="AudioStream" uid="uid://dq5mbs0nwujsh" path="res://Assets/Sound/click_simple_menu.wav" id="6_pvry3"]
+[ext_resource type="Texture2D" uid="uid://dm5e7jhupvgql" path="res://Assets/UI/Bouton_Start_03.png" id="6_tv17o"]
+[ext_resource type="Texture2D" uid="uid://cdbt3dall7kvi" path="res://Assets/UI/Bouton_Start_02.png" id="7_ejxp8"]
+[ext_resource type="Texture2D" uid="uid://dvs6uuaa3b0hu" path="res://Assets/UI/Bouton_Credit_01.png" id="8_j3rxd"]
+[ext_resource type="Texture2D" uid="uid://cjx283tpvjti0" path="res://Assets/UI/Bouton_Credit_03.png" id="9_13th5"]
+[ext_resource type="Texture2D" uid="uid://drobdi40bxco7" path="res://Assets/UI/Bouton_Credit_02.png" id="10_kk5au"]
+[ext_resource type="Texture2D" uid="uid://cobivjd2mp8xb" path="res://Assets/UI/Bouton_Quit_01.png" id="11_3sudy"]
+[ext_resource type="Texture2D" uid="uid://dk4127bt2yk4" path="res://Assets/UI/Bouton_Quit_03.png" id="12_0tdij"]
+[ext_resource type="Texture2D" uid="uid://b37ant0wmfojg" path="res://Assets/UI/Bouton_Quit_02.png" id="13_evnqs"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_kcl5f")
 
 [node name="BG" type="Sprite2D" parent="."]
-texture = ExtResource("1_s6c2g")
+texture = ExtResource("2_7t1ia")
 centered = false
 
-[node name="StartButton" type="Button" parent="."]
-offset_left = 117.0
-offset_top = 244.0
-offset_right = 288.0
-offset_bottom = 347.0
-text = "Start"
-
-[node name="CreditButton" type="Button" parent="."]
-offset_left = 121.0
-offset_top = 425.0
-offset_right = 292.0
-offset_bottom = 528.0
-text = "Credits"
+[node name="Rules" parent="." instance=ExtResource("3_450c4")]
+z_index = 1
+position = Vector2(0, 70)
 
 [node name="HoverButton" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(117, 244)
@@ -36,7 +36,39 @@ position = Vector2(117, 244)
 stream = ExtResource("6_pvry3")
 area_mask = 0
 
-[connection signal="mouse_entered" from="StartButton" to="." method="_on_start_button_mouse_entered"]
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="mouse_entered" from="CreditButton" to="." method="_on_credit_button_mouse_entered"]
-[connection signal="pressed" from="CreditButton" to="." method="_on_credit_button_pressed"]
+[node name="StartTextureButton" type="TextureButton" parent="."]
+offset_left = 187.0
+offset_top = 650.0
+offset_right = 2004.0
+offset_bottom = 1169.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_ad5yg")
+texture_pressed = ExtResource("6_tv17o")
+texture_hover = ExtResource("7_ejxp8")
+
+[node name="CreditTextureButton" type="TextureButton" parent="."]
+offset_left = 235.0
+offset_top = 813.0
+offset_right = 2052.0
+offset_bottom = 1332.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("8_j3rxd")
+texture_pressed = ExtResource("9_13th5")
+texture_hover = ExtResource("10_kk5au")
+
+[node name="QuitTextureButton" type="TextureButton" parent="."]
+offset_left = 233.0
+offset_top = 939.0
+offset_right = 2050.0
+offset_bottom = 1458.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("11_3sudy")
+texture_pressed = ExtResource("12_0tdij")
+texture_hover = ExtResource("13_evnqs")
+
+[connection signal="mouse_entered" from="StartTextureButton" to="." method="_on_start_texture_button_mouse_entered"]
+[connection signal="pressed" from="StartTextureButton" to="." method="_on_start_texture_button_pressed"]
+[connection signal="mouse_entered" from="CreditTextureButton" to="." method="_on_credit_texture_button_mouse_entered"]
+[connection signal="pressed" from="CreditTextureButton" to="." method="_on_credit_texture_button_pressed"]
+[connection signal="mouse_entered" from="QuitTextureButton" to="." method="_on_quit_texture_button_mouse_entered"]
+[connection signal="pressed" from="QuitTextureButton" to="." method="_on_quit_texture_button_pressed"]
