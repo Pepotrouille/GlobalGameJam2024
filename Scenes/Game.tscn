@@ -26,18 +26,155 @@ position = Vector2(102, 50)
 [node name="GUI" parent="CanvasLayer" instance=ExtResource("2_x43op")]
 
 [node name="TourneDisque" parent="." instance=ExtResource("4_hcv4a")]
-position = Vector2(1434, 689)
-scale = Vector2(2, 1.5)
-type = 3
-
-[node name="Crocs" parent="." instance=ExtResource("4_hcv4a")]
-position = Vector2(865, 567)
-scale = Vector2(3, 1.5)
+position = Vector2(789, 566)
+scale = Vector2(3, 1)
 type = 2
 
+[node name="Crocs" parent="." instance=ExtResource("4_hcv4a")]
+position = Vector2(1033, 655)
+scale = Vector2(1.5, 1)
+type = 3
+
 [node name="Fleur" parent="." instance=ExtResource("4_hcv4a")]
-position = Vector2(305, 622)
+position = Vector2(163, 347)
+scale = Vector2(2, 3)
+
+[node name="Groupe None" type="Node2D" parent="."]
+
+[node name="None_1" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(257, 946)
+scale = Vector2(2, 2)
+type = 0
+
+[node name="None_2" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(482, 702)
+rotation = -0.235619
+scale = Vector2(2.2, 2.2)
+type = 0
+
+[node name="None_3" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(101, 647)
+scale = Vector2(1.7, 1.7)
+type = 0
+
+[node name="None_4" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(128, 790)
+scale = Vector2(1.7, 1.7)
+type = 0
+
+[node name="None_5" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(364, 725)
+type = 0
+
+[node name="None_6" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(386, 504)
+type = 0
+
+[node name="None_7" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(403, 398)
+rotation = -0.149249
+scale = Vector2(0.6, 2.8)
+type = 0
+
+[node name="None_8" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(615, 830)
+rotation = -3.58486
+scale = Vector2(4, 2)
+type = 0
+
+[node name="None_10" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(703, 693)
+scale = Vector2(0.8, 0.8)
+type = 0
+
+[node name="None_12" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1031, 898)
+scale = Vector2(1.5, 4)
+type = 0
+
+[node name="None_13" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1409, 909)
+rotation = -7.35679
+scale = Vector2(1, 2)
+type = 0
+
+[node name="None_14" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1439, 794)
+rotation = -7.4836
+scale = Vector2(1, 4)
+type = 0
+
+[node name="None_15" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(862, 695)
+rotation = -7.96365
 scale = Vector2(1.5, 5)
+type = 0
+
+[node name="None_16" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(865, 277)
+rotation = -7.84077
+scale = Vector2(2.5, 3.7)
+type = 0
+
+[node name="None_17" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1203, 433)
+rotation = -7.81416
+scale = Vector2(3, 1.5)
+type = 0
+
+[node name="None_18" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1564, 89)
+rotation = -7.79851
+scale = Vector2(4.5, 5.5)
+type = 0
+
+[node name="None_19" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1524, 305)
+rotation = -7.81305
+scale = Vector2(1, 2)
+type = 0
+
+[node name="None_20" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1508, 445)
+rotation = -7.76583
+scale = Vector2(2.8, 4)
+type = 0
+
+[node name="None_21" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1688, 373)
+rotation = -7.79746
+scale = Vector2(2.2, 2.7)
+type = 0
+
+[node name="None_22" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1613, 632)
+rotation = -1.31222
+scale = Vector2(1, 3)
+type = 0
+
+[node name="None_23" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1893, 395)
+rotation = -1.46318
+scale = Vector2(2.5, 2.7)
+type = 0
+
+[node name="None_24" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(302, 29)
+rotation = -1.28086
+scale = Vector2(4.5, 7)
+type = 0
+
+[node name="None_26" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1614, 751)
+rotation = -7.5954
+scale = Vector2(2.2, 1.8)
+type = 0
+
+[node name="None_28" parent="Groupe None" instance=ExtResource("4_hcv4a")]
+position = Vector2(1232, 604)
+rotation = -1.40784
+scale = Vector2(2, 3.5)
+type = 0
 
 [node name="Ambiance" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_p4xiu")
