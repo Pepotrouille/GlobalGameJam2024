@@ -2,9 +2,9 @@ extends Area2D
 
 #-----------Attributes--------------
 
-@export var cursor = load("res://Assets/placeholder/cursor.png")
-@export var cursor_interact = load("res://Assets/placeholder/cursor_interact.png")
-@export var cursor_interacting = load("res://Assets/placeholder/cursor_interact_2.png")
+@export var cursor = load("res://Assets/UI/cursor_regular.png")
+@export var cursor_interact = load("res://Assets/UI/cursor_interact.png")
+@export var cursor_interacting = load("res://Assets/UI/cursor_interacting.png")
 
 var can_interact : bool
 
@@ -57,18 +57,27 @@ func _is_regular_cursor():
 
 func switch_to_regular_cursor():
 	$Sprite2D.texture = cursor
+	$Sprite2D.scale.x = 0.2
+	$Sprite2D.scale.y = 0.2
 
 func _is_cursor_interact():
 	return $Sprite2D.texture == cursor_interact
 
 func switch_to_cursor_interact():
 	$Sprite2D.texture = cursor_interact
+	if _is_regular_cursor():
+		$Sprite2D.scale.x = 0.3
+		$Sprite2D.scale.y = 0.3
+		
 
 func _is_cursor_interacting():
 	return $Sprite2D.texture == cursor_interacting
 
 func switch_to_cursor_interacting():
 	$Sprite2D.texture = cursor_interacting
+	if _is_regular_cursor():
+		$Sprite2D.scale.x = 0.3
+		$Sprite2D.scale.y = 0.3
 
 
 

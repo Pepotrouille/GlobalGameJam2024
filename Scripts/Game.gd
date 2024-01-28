@@ -17,10 +17,9 @@ func _process(delta):
 	if game_is_finished:
 		timer += 20*delta
 		if timer > TIMER_MAX :
-			var root = get_tree().get_root()
-			root.add_child(victory_scene.instantiate())
-			root.remove_child(self)
-			self.queue_free()
+			$CanvasLayer/GUI._reset()
+			timer = 0
+			get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
 			
 
 func _ready():
@@ -37,4 +36,8 @@ func _input(event):
 		var end_game = $CanvasLayer/GUI._change_icon(type)
 		if end_game:
 			game_is_finished = end_game
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_ESCAPE:
+			get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
+
 	

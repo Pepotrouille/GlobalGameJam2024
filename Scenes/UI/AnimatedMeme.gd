@@ -16,6 +16,8 @@ func _ready():
 	position.y = pos_out_of_screen
 	position.x = 960
 
+func _reset_timer():
+	waiting_timer = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
