@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://cgxyiyqhpyvea"]
+[gd_scene load_steps=59 format=3 uid="uid://cgxyiyqhpyvea"]
 
 [ext_resource type="Texture2D" uid="uid://co15m515en4q6" path="res://Assets/Texture/Background.jpg" id="1_bfgtf"]
 [ext_resource type="Shader" path="res://Assets/Texture/CellShading.gdshader" id="2_84210"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://coiy1um4qm3iw" path="res://Assets/FBX/Boug_Assis_01.fbx" id="14_hlmy2"]
 [ext_resource type="PackedScene" uid="uid://dn3suoq33u5mq" path="res://Assets/FBX/Commode_01.fbx" id="15_ogggm"]
 [ext_resource type="PackedScene" uid="uid://cj5121fv01fhd" path="res://Assets/FBX/Armoire_Etagere_01.fbx" id="16_y8n8y"]
-[ext_resource type="Material" path="res://Assets/Material/MatEnviro/ToonMatCube.tres" id="17_7hffm"]
+[ext_resource type="Material" uid="uid://b2q34f7clvul2" path="res://Assets/Material/MatEnviro/ToonMatCube.tres" id="17_7hffm"]
 [ext_resource type="PackedScene" uid="uid://bl32b85dxan7w" path="res://Assets/FBX/Arbre_A_Chat_01.fbx" id="18_sgagr"]
 [ext_resource type="Texture2D" uid="uid://cupi0764fqwj4" path="res://Assets/Texture/Tableau/Chat1.jpg" id="19_ovank"]
 [ext_resource type="Texture2D" uid="uid://b6ye67jcdnd72" path="res://Assets/Texture/Tableau/Chat2.jpg" id="20_h18qp"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://c01qns1sx1slw" path="res://Assets/Texture/Tableau/Chat7.jpg" id="25_5aacw"]
 [ext_resource type="Material" uid="uid://cslxmn7ivd8cg" path="res://Assets/Material/MatEnviro/ToonMatTapis.tres" id="26_5a2bu"]
 [ext_resource type="Material" uid="uid://dopnblll34jww" path="res://Assets/Material/MatEnviro/ToonMatEtagèreMur.tres" id="27_2o04k"]
+[ext_resource type="PackedScene" uid="uid://c2h3xf0lddeao" path="res://Assets/FBX/Tapis_01.fbx" id="27_dea4j"]
 [ext_resource type="PackedScene" uid="uid://hqcnsfk64asa" path="res://Assets/FBX/PC_01.fbx" id="28_5hjle"]
 [ext_resource type="PackedScene" uid="uid://bkuelcvnytpgs" path="res://Assets/FBX/Panier_Pour_Chat_01.fbx" id="29_ribod"]
 [ext_resource type="PackedScene" uid="uid://dosknqxidmxix" path="res://Assets/FBX/Lampe_01.fbx" id="30_vj31g"]
@@ -454,9 +455,13 @@ texture = ExtResource("25_5aacw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.680276, 0.223888, 0.169993)
 
 [node name="Tapis" type="CSGBox3D" parent="Meuble/Tapis"]
+visible = false
 material_override = ExtResource("26_5a2bu")
 size = Vector3(1.96923, 0.116802, 1.46134)
 material = ExtResource("6_b3flo")
+
+[node name="Root Scene" parent="Meuble/Tapis" instance=ExtResource("27_dea4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0269306, -0.164542)
 
 [node name="Etagère" type="Node3D" parent="Meuble"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.680276, 0.223888, 0.169993)

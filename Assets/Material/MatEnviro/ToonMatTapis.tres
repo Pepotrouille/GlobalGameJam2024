@@ -1,5 +1,8 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cslxmn7ivd8cg"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cslxmn7ivd8cg"]
+
+[ext_resource type="Texture2D" uid="uid://d368y0sby8ew3" path="res://Assets/Texture/Tapis_Base_color.png" id="1_3fdve"]
 
 [resource]
 diffuse_mode = 3
 albedo_color = Color(0.886275, 0.839216, 1, 1)
+albedo_texture = ExtResource("1_3fdve")
