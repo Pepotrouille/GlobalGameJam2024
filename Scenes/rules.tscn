@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/rules.gd" id="1_x22in"]
 [ext_resource type="Texture2D" uid="uid://dhi8amvdv760w" path="res://Assets/UI/Bouton_Start_01.png" id="2_0uadw"]
 [ext_resource type="Texture2D" uid="uid://d4kijtgqtr6e8" path="res://Assets/UI/Disclaimer_Regles2.png" id="2_7egq5"]
-[ext_resource type="AudioStream" uid="uid://cjvksfsr2lueg" path="res://Assets/Sound/click_efleurement_menu_1.wav" id="3_0tt1g"]
+[ext_resource type="AudioStream" uid="uid://bysqa0kljkn6n" path="res://Assets/Sound/menu_button_canceled.wav" id="3_16vsu"]
 [ext_resource type="Texture2D" uid="uid://dm5e7jhupvgql" path="res://Assets/UI/Bouton_Start_03.png" id="3_cx3ry"]
 [ext_resource type="Texture2D" uid="uid://cdbt3dall7kvi" path="res://Assets/UI/Bouton_Start_02.png" id="4_inyhp"]
 
@@ -17,7 +17,7 @@ texture = ExtResource("2_7egq5")
 
 [node name="HoverButton" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(117, 244)
-stream = ExtResource("3_0tt1g")
+stream = ExtResource("3_16vsu")
 area_mask = 0
 
 [node name="TextureButton" type="TextureButton" parent="."]

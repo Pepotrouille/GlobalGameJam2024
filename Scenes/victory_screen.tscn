@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7wktd2eklox"]
+[gd_scene load_steps=9 format=3 uid="uid://c7wktd2eklox"]
 
 [ext_resource type="Script" path="res://Scripts/victory_screen.gd" id="1_mywmx"]
 [ext_resource type="Texture2D" uid="uid://gmkcg33wf6rm" path="res://Assets/UI/Menu_Victory.png" id="2_3cnla"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d2b8tmf5b3guv" path="res://Assets/UI/Bouton_Back_03.png" id="4_vquoc"]
 [ext_resource type="Texture2D" uid="uid://dja1ne2g6yc38" path="res://Assets/UI/Bouton_Back_02.png" id="5_wm6at"]
 [ext_resource type="AudioStream" uid="uid://dq5mbs0nwujsh" path="res://Assets/Sound/click_simple_menu.wav" id="5_x1n7j"]
+[ext_resource type="AudioStream" uid="uid://c313wr7jk8k3o" path="res://Assets/Sound/victory_music.wav" id="7_wwf25"]
 
 [node name="Victory_screen" type="Node2D"]
 script = ExtResource("1_mywmx")
@@ -34,6 +35,9 @@ texture_hover = ExtResource("5_wm6at")
 position = Vector2(117, 244)
 stream = ExtResource("5_x1n7j")
 area_mask = 0
+
+[node name="Victory_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_wwf25")
 
 [connection signal="mouse_entered" from="BackTextureButton" to="." method="_on_back_texture_button_mouse_entered"]
 [connection signal="pressed" from="BackTextureButton" to="." method="_on_back_texture_button_pressed"]
