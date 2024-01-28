@@ -1,10 +1,10 @@
 extends Control
 
 #CHANGER LES PATHS PAR VRAI ASSETS
-var none_icon = load("res://Assets/placeholder/icon4.png")
-var fleur_icon = load("res://Assets/placeholder/icon1.png")
-var tourne_disque_icon = load("res://Assets/placeholder/icon2.png")
-var crocs_icon = load("res://Assets/placeholder/icon3.png")
+var none_icon = load("res://Assets/UI/Icon_None.png")
+var fleur_icon = load("res://Assets/UI/Icon_Fleur.png")
+var tourne_disque_icon = load("res://Assets/UI/Icon_Tourne_Disque.png")
+var crocs_icon = load("res://Assets/UI/Icon_Crocs.png")
 
 var fleur_found = false
 var tourne_disque_found = false
@@ -19,17 +19,22 @@ func _change_icon(type_of_object):
 	if type_of_object is Game.TYPE_OBJECTS:
 		match type_of_object:
 			Game.TYPE_OBJECTS.FLEUR:
+				$Clic.play()
 				$Cases/icon1.texture = fleur_icon
 				fleur_found = true
 				$FleurCat._meme_appear()
 			Game.TYPE_OBJECTS.TOURNE_DISQUE:
+				$Clic.play()
 				$Cases/icon2.texture = tourne_disque_icon
 				tourne_disque_found = true
 				$TourneDisqueCat._meme_appear()
 			Game.TYPE_OBJECTS.CROCS:
+				$Clic.play()
 				$Cases/icon3.texture = crocs_icon
 				crocs_found = true
 				$CrocsCat._meme_appear()
+			Game.TYPE_OBJECTS.NONE:
+				$WrongSong.play()
 				
 	if crocs_found and tourne_disque_found and fleur_found:
 		end_game = true

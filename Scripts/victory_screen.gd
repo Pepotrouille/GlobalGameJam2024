@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	$Victory_music.play()
 
 func _on_back_texture_button_pressed():
 	$ClickSimple.play()

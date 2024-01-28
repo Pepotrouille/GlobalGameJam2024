@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	$Rules.visible = false
+	GlobalAudioStreamPlayer.play_sound($Music.stream)
 
 func _on_start_texture_button_pressed():
 	$Rules.visible = true

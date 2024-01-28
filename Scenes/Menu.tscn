@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cua6n3crbf07d"]
+[gd_scene load_steps=16 format=3 uid="uid://cua6n3crbf07d"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_kcl5f"]
 [ext_resource type="Texture2D" uid="uid://60sq6m38htt6" path="res://Assets/UI/Menu_Start.png" id="2_7t1ia"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cobivjd2mp8xb" path="res://Assets/UI/Bouton_Quit_01.png" id="11_3sudy"]
 [ext_resource type="Texture2D" uid="uid://dk4127bt2yk4" path="res://Assets/UI/Bouton_Quit_03.png" id="12_0tdij"]
 [ext_resource type="Texture2D" uid="uid://b37ant0wmfojg" path="res://Assets/UI/Bouton_Quit_02.png" id="13_evnqs"]
+[ext_resource type="AudioStream" uid="uid://c5cshmtv2db51" path="res://Assets/Sound/Musique_menu_ver_1.ogg" id="15_pkk36"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_kcl5f")
@@ -65,6 +66,11 @@ scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("11_3sudy")
 texture_pressed = ExtResource("12_0tdij")
 texture_hover = ExtResource("13_evnqs")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(117, 244)
+stream = ExtResource("15_pkk36")
+area_mask = 0
 
 [connection signal="mouse_entered" from="StartTextureButton" to="." method="_on_start_texture_button_mouse_entered"]
 [connection signal="pressed" from="StartTextureButton" to="." method="_on_start_texture_button_pressed"]
